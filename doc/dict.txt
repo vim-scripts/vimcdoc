@@ -32,9 +32,10 @@ Note: This is is meant to be used with Vim!
  + folding                            折叠
  + identifier						  标识符
  + indent                             缩进
- + key mapping						  key mapping
+ + key mapping						  键盘映射
  + lisp                               lisp
  + mark and tag                       标记，标签
+ + marker							  标志 (folding)
  + offset                             偏移
  + operator                           操作符 
  + paragraph                          段落
@@ -59,22 +60,23 @@ Note: This is is meant to be used with Vim!
  + Tcl								  Tcl
  + SNiFF+							  SNiFF+
  + Win32							  Win32
- + Windows							  Windows 
+ + Windows							  Windows
  + Plugin							  插件
- + regexp							  regexp	
+ + regexp							  regexp
  + pattern							  模式
  + matching							  匹配
  + man page							  man page
- + modeline							  modelin
- + shell script						  shell script ???
+ + modeline							  modeline
+ + shell script						  shell 脚本
  + toolbar							  工具条
  + tabstop							  tabstop
  + line break						  ???
- + local identifier					  
- + global identifier
+ + local identifier					  本地标识符
+ + global identifier				  全局标识符
  + popup menu						  弹出菜单
  + keyword							  关键字
  + TABSTOP							  制表位
+ + you								  你
 
 *Recommended*
 +----------------------------------------------------+

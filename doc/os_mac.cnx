@@ -1,0 +1,88 @@
+*os_mac.txt*	For Vim version 6.2.  原文最近更新: 2002年10月8日
+
+
+		     Vim 参考手册    作者：Bram Moolenaar
+	    (翻译：iCrazy<icrazy@ustc.edu>  http://vimcdoc.sf.net)
+
+
+					*mac* *Mac* *macintosh* *Macintosh*
+
+Vim 的3.0版有一个移植到 Mac 的版本。这是当时文档中开始的几句话：
+
+VIM 发行注记
+最初的 Macintosh 发行, VIM 版本 3.0
+1994年10月19日
+
+Eric Fischer
+<enf1@midway.uchicago.edu>, <eric@jcp.uchicago.edu>, <etaoin@uchicago.edu>
+5759 N. Guilford Ave
+Indianapolis IN 46220 USA
+
+本文阐述了 Vim 的 macintosh 版本的特性。
+
+NOTE: 现在的5.0版本，仍然处于 alpha 阶段
+
+1. 文件名约定			|mac-filename|
+2. .vimrc 和 .vim 文件		|mac-vimfile|
+3. 已知的不足之处		|mac-lack|
+4. Mac 错误报告			|mac-bug|
+5. 编译 Vim			|mac-compile|
+
+==============================================================================
+1. 文件名约定						*mac-filename*
+
+您可以使用 Unix 或 Mac 的分隔符，或者混合使用两者。为了确定指定的文件名是与
+当前目录相关（相对路径），还是绝对路径（即：和“桌面”相关），我们使用了
+如下的算法：
+
+	如果路径以 "/" 开始，则为绝对路径
+	如果路径以 ":" 开始，则为相对路径
+	如果路径不以 "/" 和 ":" 开始，但是 ":" 在 "/" 之前出现，则为绝对路径
+>
+		:e /HD/text
+		:e HD:text
+<	编辑磁盘 "HD" 中的文件 "text" >
+		:e :src:main.c
+		:e src/main.c
+<	编辑当前目录下子目录 "src" 中的文件 "main.c" >
+		:e os_mac.c
+<	编辑当前目录下的文件 "os_mac.c"。
+
+您可以使用变量 |$VIM| 和 |$VIMRUNTIME| >
+
+		:so $VIMRUNTIME:syntax:syntax.vim
+
+==============================================================================
+2. .vimrc 和 .vim 文件					*mac-vimfile*
+
+在 Mac 机上，一般应避免使用以 "." 开头的文件，所以那些 rc 文件被命名为
+"vimrc" 或 "_vimrc"，以及 "gvimrc" 或 "_gvimrc"。这些文件可以是任何形式（mac,
+dos 或 unix）。如果 |'nocompatible'| 选项打开，Vim 可以处理任何文件格式，否则
+它只能处理 mac 格式的文件。
+
+==============================================================================
+3. 已知的不足之处					*mac-lack*
+
+-同时含有 ":" 和 "/" 的文件名有时会被错误的解释。（请重新执行命令）
+-Scrollbar are not scrolling live, and  when only the arrow or scroll area,
+   a limit of 32 line or page is scrolled.
+-语法高亮在 68k Macs 上可以工作，但是速度 _非常_ 慢。
+
+==============================================================================
+4. Mac 错误报告						*mac-bug*
+
+当报告任何与 Mac 平台相关的 bug 或特性时，请使用 vim-mac 邮件列表 |vim-mac|.
+然而, 您必须先订阅它。另一个办法就是发邮件给当前的 MacVim 维护者：
+
+	mac@vim.org
+
+==============================================================================
+5. 编译 Vim						*mac-compile*
+
+Vim 是使用 CodeWarrior 工程提供的 CodeWarrior 9 编译出来的。如果您正在使
+用一个更新的版本（例如：CW Pro），您需要先转换这个工程。
+当为 68k Macs 编译 Vim 时，您需要在 ResEdit 中打开 "大小" 资源并且要选中“注
+意高优先级事件”按钮，从而使得拖曳功能可以正常使用。
+您需要把内存分区增大到至少1024k，以避免 Vim 由于内存不足而崩溃。
+
+ vim:tw=78:ts=8:ft=help:norl:
