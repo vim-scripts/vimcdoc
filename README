@@ -1,0 +1,13 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=775
+
+This is an effort to translate the wonderful Vim online help into 
+Chinese. The targetted Vim version is 6.4. We've already translated
+*all* the documents including the user manual as well as the reference
+manaul.
+
+See our web page:
+
+http://vimcdoc.sf.net (English)
+http://vcd.gro.clinux.org (Chinese GB)
+
+for more detail.

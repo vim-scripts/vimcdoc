@@ -1,0 +1,53 @@
++-----------+
+|  INSTALL  |
++-----------+
+Linux:
+下载的 tar.gz 或 tar.bz2 包括所有翻译过的 vim 文档 (.txt文件)。
+先将其解压缩：
+    tar zxvf vimcdoc-<versoin>.tar.gz
+    或
+    tar jxvf vimcdoc-<version>.tar.bz2
+然后进入 vimcdoc-<version> 目录并执行
+    ./vimcdoc.sh install
+就可以了。该安装程序会自动识别 Vim 的安装路径，将中文的文档拷贝
+到那里，并将原有的英文文档备份起来以便恢复。
+
+你也可以自己动手来安装：只要把所有的中文文档拷贝到相应的目录就
+行了。一般来说，该目录为：
+    /usr/share/vim/vim<版本号>/doc
+比如说：
+    /usr/share/vim/vim6.1/doc
+如果你是自己编译的 vim, 这个目录很可能是：
+    /usr/local/share/vim/vim6.1/doc
+找出这个目录的方法是：进入 vim，然后执行 :echo $VIMRUNTIME
+另外，记得备份！
+
+Win32:
+建议使用已经做好的自动安装程序。如果你想手动安装，可以参照上面
+Linux 的做法。
+
+安装完之后，启动 vim/gvim, 键入 :help 看看吧！
+
+
++------------+
+|  UNINTALL  |
++------------+
+Linux:
+如果你是使用的自动安装脚本安装的话，只要运行：
+    ./vimcdoc.sh uninstall
+即可。否则你就得自己用备份的文档来覆盖中文文档了。
+
+Win32:
+如果你安装时选择了备份原文档，在 doc/backup/ 目录内会有一个
+Uninst.exe，只要执行它就可以了。否则你就得自己想办法了。
+
+
++---------+
+| UPDATE  |
++---------+
+Linux:
+你当然可以用新版本直接安装就行了。但有一个更方便的办法，前提是
+你要用一些 cvs。进入文档所在目录，如 /usr/share/vim/vim62/doc，
+然后运行 
+    cvs -z3 update
+即可。

@@ -1,0 +1,110 @@
+The following table contains the terminologies Vim used
+in its documentation and The corresponding Chinese phrases.
+
+The lists are ever changing. Suggestions are welcomed!
+
+
+
+Note: This is is meant to be used with Vim!
+
+
+*Compulsory*
++----------------------------------------------------+
+|  ENGLISH                             中文          |
++----------------------------------------------------+
+ + Ex                                 Ex
+ + GUI                                GUI
+ + UNIX                               UNIX
+ + Vi                                 Vi
+ + Vim                                Vim
+ + abbreviations                      缩写
+ + alternative file					  备选文件
+ + autocommand                        自动命令
+ + backslash                          反斜杠
+ + block                              块
+ + boolean                            布尔
+ + buffer                             缓冲
+ + column                             列
+ + comment                            注释
+ + digraph							  二合子母
+ + event                              事件
+ + expression                         表达式
+ + folding                            折叠
+ + identifier						  标识符
+ + indent                             缩进
+ + key mapping						  key mapping
+ + lisp                               lisp
+ + mark and tag                       标记，标签
+ + offset                             偏移
+ + operator                           操作符 
+ + paragraph                          段落
+ + quickfix							  quickfix
+ + register                           寄存器
+ + scroll                             滚屏
+ + section							  节
+ + sentence							  句子
+ + shell							  shell
+ + shiftwidth                         shiftwidth
+ + swap file                          交换文件
+ + synatx highligh                    语法高亮
+ + text object                        文本对象
+ + visual mode                        visual 模式
+ + yank                               剪切
+ + Ruby								  Ruby
+ + Perl								  Perl
+ + cscope							  cscope
+ + debugger							  debugger
+ + Sun Visual Workshop				  Sun Visual Workshop
+ + OLE								  OLE
+ + Tcl								  Tcl
+ + SNiFF+							  SNiFF+
+ + Win32							  Win32
+ + Windows							  Windows 
+ + Plugin							  插件
+ + regexp							  regexp	
+ + pattern							  模式
+ + matching							  匹配
+ + man page							  man page
+ + modeline							  modelin
+ + shell script						  shell script ???
+ + toolbar							  工具条
+ + tabstop							  tabstop
+ + line break						  ???
+ + local identifier					  
+ + global identifier
+ + popup menu						  弹出菜单
+ + keyword							  关键字
+ + TABSTOP							  制表位
+
+*Recommended*
++----------------------------------------------------+
+|  ENGLISH                             中文          |
++----------------------------------------------------+
+ + active                             活动的
+ + append                             添加
+ + arg                                参数
+ + argument                           参数
+ + atom                               匹配原子
+ + brace							  括号
+ + bracket                            方括号
+ + cursor                             光标
+ + inner							  内
+ + join								  连接
+ + layout                             布局
+ + like                               如
+ + literally						  照字面意思的
+ + recall                             回忆
+ + reset							  复位
+ + suspend							  挂起
+ + tooltip                            提示
+ + verbose							  verbose
+ + word								  单词
+ + format							  格式化
+ + session							  会话
+ + completion, complete				  补全
+ + encryption						  加密
+ + portable							  可移植的
+ + word processor					  字处理器
+
+------------------------------------------------------------------------------
+ vim:tw=78:ts=4:norl:
