@@ -9,11 +9,11 @@
 # Author:	wandys  (wandys@users.sf.net)
 #		lang2	(lang2@users.sf.net)
 
-vim --cmd ":exec 'normal i' . \$VIMRUNTIME | wq! vimrt.$$" > /dev/null 2>&1 
+vim --cmd ":exec 'normal i' . \$VIMRUNTIME | wq! /tmp/vimrt.$$" > /dev/null 2>&1 
 
-if [ -e vimrt.$$ ]; then
-	VIM_PATH=`cat vimrt.$$`
-	rm vimrt.$$
+if [ -e /tmp/vimrt.$$ ]; then
+	VIM_PATH=`cat /tmp/vimrt.$$`
+	rm /tmp/vimrt.$$
 else
 	echo 'Error: No vim found on this system.'
 	exit 1
@@ -24,6 +24,10 @@ case $1 in
 	if [ ! -d $VIM_PATH/doc.bk ]; then
 		mkdir $VIM_PATH/doc.bk
 		cp $VIM_PATH/doc/* $VIM_PATH/doc.bk
+	fi
+	if [ -f /etc/debian_version ]; then
+		cp doc/help.txt $VIM_PATH/doc
+		gzip doc/*.txt
 	fi
 	cp -r doc/* $VIM_PATH/doc
 	echo 'Done.'

@@ -315,7 +315,7 @@ Note 如果你用十个指头打字的话，这些字符是很容易记住的：
 
 
 普通原总揽。					*/ordinary-atom*
-下面给处一些解释和例子，包括链接。			*E64*
+下面给处一些解释和例子，包括链接。
 
       ordinary atom ~
       magic   nomagic	matches ~

@@ -68,11 +68,11 @@
 	²åÈë×ÖÄ¸ "a"					    a
 	ÒÆµ½ÐÐÎ²        				     <End>
 
-ÕâÖÖ·½·¨ÈÃÄãÁôÔÚ²åÈëÄ£Ê½ÏÂ£¬ÀûÓÃÌØÊâ¼üÀ´ÒÆ¶¯¹â±ê¡£ÕâÀàËÆÓÚÄãÔÚÒ»¸ö²»·ÖÄ£Ê½µÄ±à¼­
-Æ÷ÀïËù²ÉÓÃµÄ²Ù×÷·½·¨¡£Ëü±È½ÏÈÝÒ×¼ÇÒä£¬µ«±È½Ï·ÑÊÂ (Äã±ØÐë°ÑÄãµÄÊÖ´Ó×ÖÄ¸¼üÒÆ¶¯µ½
-¹â±ê·½Ïò¼ü£¬¶øÇÒ, ²»¿´¼üÅÌÄÑÒÔ°´×¼ <End> ¼ü)¡£
-   ÕâÐ©ÌØÊâ¼üÔÚÊéÐ´Ò»¸öÍ£ÁôÔÚ²åÈëÄ£Ê½ÏÂµÄÓ³ÉäÊ±·Ç³£ÓÐÓÃ¡£¶îÍâËùÐèµÄ¼üÅÌÂ¼ÈëÒ²ÊÇ
-ÖµµÃµÄ¡£
+ÕâÖÖ·½·¨ÈÃÄãÁôÔÚ²åÈëÄ£Ê½ÏÂ£¬ÀûÓÃÌØÊâ¼üÀ´ÒÆ¶¯¹â±ê¡£ÕâÀàËÆÓÚÄãÔÚÒ»¸ö²»·ÖÄ£Ê½µÄ
+±à¼­Æ÷ÀïËù²ÉÓÃµÄ²Ù×÷·½·¨¡£Ëü±È½ÏÈÝÒ×¼ÇÒä£¬µ«±È½Ï·ÑÊÂ (Äã±ØÐë°ÑÄãµÄÊÖ´Ó×ÖÄ¸¼ü
+ÒÆ¶¯µ½¹â±ê·½Ïò¼ü£¬¶øÇÒ, ²»¿´¼üÅÌÄÑÒÔ°´×¼ <End> ¼ü)¡£
+   ÕâÐ©ÌØÊâ¼üÔÚÊéÐ´Ò»¸öÍ£ÁôÔÚ²åÈëÄ£Ê½ÏÂµÄÓ³ÉäÊ±·Ç³£ÓÐÓÃ¡£¶îÍâËùÐèµÄ¼üÅÌÂ¼ÈëÒ²
+ÊÇÖµµÃµÄ¡£
    ÄãÔÚ²åÈëÄ£Ê½ÏÂ¿ÉÒÔÀûÓÃµÄÌØÊâ¼üÓÐÒÔÏÂÕâÐ©:
 
 	<C-Home>	ÒÆµ½ÎÄ¼þÊ×
@@ -96,14 +96,14 @@
 
 	:set showmatch
 
-ÏÖÔÚÄã¼üÈë±ÈÈç "(example)" ÕâÑù¼¸¸ö×Ö£¬µ±Äã¼üÈëÓÒÀ¨ºÅ ) Ê±, Vim ¾Í°Ñ¹â±êÉÁµ½Æ¥ÅäµÄ
-×óÀ¨ºÅ ( ÉÏ£¬ÔÚÄÇ¶ùÍ£Áô°ëÃëÖÓ, È»ºó·µ»ØÔ­´¦¡£
-   Èç¹ûÆ¥ÅäµÄ×óÀ¨ºÅ²»´æÔÚ£¬Vim ¾ÍÃùÆðÏìÁå¡£ÕâÑùÄã¾Í»áÏëÆðÀ´Äã¿ÉÄÜÔÚÄÄ¶ùÍüÁËÒ»¸ö×ó
-À¨ºÅ£¬»ò¼üÈëÁËÌ«¶à´ÎµÄÓÒÀ¨ºÅ¡£
-   Vim Ò²»áÎª [] ºÍ {} ÕâÑùµÄÀ¨ºÅÏÔÊ¾Æ¥Åä¡£Äã²»±ØµÈ´ý¹â±ê·µ»ØÔ­´¦²Å¼üÈëÏÂÒ»¸ö×Ö
-·û£¬Ö»ÒªÏÂÒ»¸ö×Ö·ûÒ»¼üÈë, ¹â±ê¾Í»á·µ»Ø, ¶ø²åÈë¾Í»á¸úÒÔÇ°Ò»Ñù¼ÌÐø¡£
-   Äã¿ÉÒÔÓÃ 'matchtime' Ñ¡Ïî¸Ä±ä Vim ÔÚÆ¥ÅäÀ¨ºÅÉÏÍ£ÁôµÄÊ±¼ä¡£ÀýÈç£¬ÒªÈÃ Vim µÈ´ý 
-1.5Ãë: >
+ÏÖÔÚÄã¼üÈë±ÈÈç "(example)" ÕâÑù¼¸¸ö×Ö£¬µ±Äã¼üÈëÓÒÀ¨ºÅ ) Ê±, Vim ¾Í°Ñ¹â±êÉÁµ½
+Æ¥ÅäµÄ×óÀ¨ºÅ ( ÉÏ£¬ÔÚÄÇ¶ùÍ£Áô°ëÃëÖÓ, È»ºó·µ»ØÔ­´¦¡£
+   Èç¹ûÆ¥ÅäµÄ×óÀ¨ºÅ²»´æÔÚ£¬Vim ¾ÍÃùÆðÏìÁå¡£ÕâÑùÄã¾Í»áÏëÆðÀ´Äã¿ÉÄÜÔÚÄÄ¶ùÍüÁËÒ»
+¸ö×óÀ¨ºÅ£¬»ò¼üÈëÁËÌ«¶à´ÎµÄÓÒÀ¨ºÅ¡£
+   Vim Ò²»áÎª [] ºÍ {} ÕâÑùµÄÀ¨ºÅÏÔÊ¾Æ¥Åä¡£Äã²»±ØµÈ´ý¹â±ê·µ»ØÔ­´¦²Å¼üÈëÏÂÒ»¸ö
+×Ö·û£¬Ö»ÒªÏÂÒ»¸ö×Ö·ûÒ»¼üÈë, ¹â±ê¾Í»á·µ»Ø, ¶ø²åÈë¾Í»á¸úÒÔÇ°Ò»Ñù¼ÌÐø¡£
+   Äã¿ÉÒÔÓÃ 'matchtime' Ñ¡Ïî¸Ä±ä Vim ÔÚÆ¥ÅäÀ¨ºÅÉÏÍ£ÁôµÄÊ±¼ä¡£ÀýÈç£¬ÒªÈÃ Vim 
+µÈ´ý1.5Ãë: >
 
 	:set matchtime=15
 
@@ -112,8 +112,8 @@
 ==============================================================================
 *24.3*	²¹È«
 
-Vim ÄÜ×Ô¶¯²¹È«²åÈëµÄµ¥´Ê¡£Äã¼üÈëÒ»¸öµ¥´ÊµÄ¿ªÍ·²¿·Ö£¬°´ CTRL-P, Vim ¾Í»áÎªÄã²Â²â
-ÓàÏÂµÄ²¿·Ö¡£
+Vim ÄÜ×Ô¶¯²¹È«²åÈëµÄµ¥´Ê¡£Äã¼üÈëÒ»¸öµ¥´ÊµÄ¿ªÍ·²¿·Ö£¬°´ CTRL-P, Vim ¾Í»áÎªÄã²Â
+²âÓàÏÂµÄ²¿·Ö¡£
    ÀýÈç£¬¼Ù¶¨ÄãÕýÔÚ½¨Á¢Ò»¸ö C ³ÌÐò, ²¢Òª¼üÈëÒÔÏÂÓï¾ä:
 
 	total = ch_array[0] + ch_array[1] + ch_array[2]; ~
@@ -122,9 +122,9 @@ Vim ÄÜ×Ô¶¯²¹È«²åÈëµÄµ¥´Ê¡£Äã¼üÈëÒ»¸öµ¥´ÊµÄ¿ªÍ·²¿·Ö£¬°´ CTRL-P, Vim ¾Í»áÎªÄã²Â²â
 
 	total = ch_array[0] + ch_ ~
 
-´ËÊ±£¬ÄãÓÃÃüÁî CTRL-P ¸æËß Vim À´²¹È«Õâ¸ö´Ê¡£Vim ¾Í»áËÑË÷ÒÔ¹â±êÇ°×Ö·û´®¿ªÍ·µÄ´Ê¡£
-ÔÚÕâ¸öÀý×ÓÖÐ£¬¾ÍÊÇ "ch_"£¬Óë´Ê ch_array Æ¥Åä¡£ËùÒÔ£¬¼üÈë CTRL-P ¾Í»áµÃµ½¸øÏÂÃæµÄ
-½á¹û:
+´ËÊ±£¬ÄãÓÃÃüÁî CTRL-P ¸æËß Vim À´²¹È«Õâ¸ö´Ê¡£Vim ¾Í»áËÑË÷ÒÔ¹â±êÇ°×Ö·û´®¿ªÍ·µÄ
+´Ê¡£ÔÚÕâ¸öÀý×ÓÖÐ£¬¾ÍÊÇ "ch_"£¬Óë´Ê ch_array Æ¥Åä¡£ËùÒÔ£¬¼üÈë CTRL-P ¾Í»áµÃµ½
+ÏÂÃæµÄ½á¹û:
 
 	total = ch_array[0] + ch_array ~
 
@@ -132,13 +132,13 @@ Vim ÄÜ×Ô¶¯²¹È«²åÈëµÄµ¥´Ê¡£Äã¼üÈëÒ»¸öµ¥´ÊµÄ¿ªÍ·²¿·Ö£¬°´ CTRL-P, Vim ¾Í»áÎªÄã²Â²â
 
 	total = ch_array[0] + ch_array[1] +  ~
 
-Èç¹ûÄãÏÖÔÚ¼üÈë CTRL-P£¬Vim ½«ÔÙ´ÎËÑË÷ÒÔ²¹È«¹â±êÇ°µÄ´Ê¡£ÓÉÓÚ¹â±êÇ°ÊÇ¿Õ¸ñ, ËüÕÒµ½
-µÄÊÇÖ®Ç°µÄµÚÒ»¸ö´Ê£¬¼´ "ch_array"¡£ ÔÙ¼üÈë CTRL-P ¸øÄãÏÂÒ»¸öÆ¥ÅäµÄ´Ê£¬ÔÚ±¾ÀýÖÐ¾Í
-ÊÇ "total"¡£µÚÈý´Î CTRL-P ËÑÑ°¸üÇ°ÃæµÄ¡£Èç¹ûÄÇ¶ùÃ»ÆäËüµÄÁË£¬±à¼­Æ÷¾Í»áÏÝÈëÎÞ´Ê
-¿ÉÅä×´Ì¬£¬ËùÒÔËÑË÷¾Í·µ»ØÔ­´¦£¬¼´ÄÇ¸ö¿Õ¸ñ¡£µÚËÄ´Î CTRL-P µ¼ÖÂ±à¼­Æ÷ÖÜ¶ø¸´Ê¼£¬ÓÖÕÒ
-µ½ "ch_array"¡£
+Èç¹ûÄãÏÖÔÚ¼üÈë CTRL-P£¬Vim ½«ÔÙ´ÎËÑË÷ÒÔ²¹È«¹â±êÇ°µÄ´Ê¡£ÓÉÓÚ¹â±êÇ°ÊÇ¿Õ¸ñ, ËüÕÒ
+µ½µÄÊÇÖ®Ç°µÄµÚÒ»¸ö´Ê£¬¼´ "ch_array"¡£ ÔÙ¼üÈë CTRL-P ¸øÄãÏÂÒ»¸öÆ¥ÅäµÄ´Ê£¬ÔÚ±¾
+ÀýÖÐ¾ÍÊÇ "total"¡£µÚÈý´Î CTRL-P ËÑÑ°¸üÇ°ÃæµÄ¡£Èç¹ûÄÇ¶ùÃ»ÆäËüµÄÁË£¬±à¼­Æ÷¾Í»á
+ÏÝÈëÎÞ´Ê¿ÉÅä×´Ì¬£¬ËùÒÔËÑË÷¾Í·µ»ØÔ­´¦£¬¼´ÄÇ¸ö¿Õ¸ñ¡£µÚËÄ´Î CTRL-P µ¼ÖÂ±à¼­Æ÷ÖÜ
+¶ø¸´Ê¼£¬ÓÖÕÒµ½ "ch_array"¡£
 
-ÍùÇ°ËÑË÷£¬ÓÃ CTRL-N¡£ÓÉÓÚÔÚÎÄ¼þ½áÎ²ËÑË÷ÓÖÈÆ»Ø¿ªÍ·£¬CTRL-N ºÍ CTRL-P ½«ÕÒµ½ÏàÍ¬
+ÍùÏÂËÑË÷£¬ÓÃ CTRL-N¡£ÓÉÓÚÔÚÎÄ¼þ½áÎ²ËÑË÷ÓÖÈÆ»Ø¿ªÍ·£¬CTRL-N ºÍ CTRL-P ½«ÕÒµ½ÏàÍ¬
 µÄÆ¥Åä£¬µ«Ë³Ðò²»Í¬¡£ÌáÊ¾: CTRL-N ÒâÎªÏÂÒ»¸öÆ¥Åä, ¶ø CTRL-P ÒâÎªÇ°Ò»¸öÆ¥Åä¡£
 £¨ÒëÕß£ºÓ¢ÎÄ Next ÒâÎªÏÂÒ»¸ö£¬Previous ÒâÎªÇ°Ò»¸ö£©
 
@@ -156,11 +156,12 @@ Vim ±à¼­Æ÷»á·Ç³£Å¬Á¦µÄÀ´²¹È«²»ÍêÕûµÄ´Ê¡£Ä¬ÈÏÇé¿öÏÂ£¬ËüËÑË÷ÈçÏÂÒ»Ð©µØ·½:
 
 Äã¿ÉÒÔÀûÓÃ 'complete' Ñ¡Ïî¶¨ÖÆËÑË÷Ë³Ðò¡£
 
-»¹¿ÉÒÔÊ¹ÓÃ 'ignorecase' Ñ¡Ïî¡£Éè¶¨Õâ¸öÑ¡Ïîºó£¬ËÑÑ°Æ¥ÅäÊ±´óÐ¡Ð´µÄÇø±ð¾Í»á±»ºöÂÔ¡£
+»¹¿ÉÒÔÊ¹ÓÃ 'ignorecase' Ñ¡Ïî¡£Éè¶¨Õâ¸öÑ¡Ïîºó£¬ËÑÑ°Æ¥ÅäÊ±´óÐ¡Ð´µÄÇø±ð¾Í»á±»ºö
+ÂÔ¡£
 
-Ò»¸öÌØÊâµÄ²¹È«Ñ¡ÏîÊÇ 'infercase'¡£ËüµÄÓÃ´¦ÊÇÔÚÑ°ÕÒÆ¥ÅäÊ±²»¼Æ´óÐ¡Ð´ ('ignorecase'
-±ØÐëÏÈ±»Éè¶¨)£¬µ«ÈÔÈ»²ÉÓÃÒÑ¼üÈë²¿·ÖµÄ´óÐ¡Ð´×÷¡£ÕâÑù, Èç¹ûÄã¼üÈë "For" ¶øVim ÕÒµ½
-ÁËÆ¥Åä "fortunately"£¬Ëù²úÉúµÄ½á¹û½«ÊÇ "Fortunately"¡£
+Ò»¸öÌØÊâµÄ²¹È«Ñ¡ÏîÊÇ 'infercase'¡£ËüµÄÓÃ´¦ÊÇÔÚÑ°ÕÒÆ¥ÅäÊ±²»¼Æ´óÐ¡Ð´ 
+('ignorecase'±ØÐëÏÈ±»Éè¶¨)£¬µ«ÈÔÈ»²ÉÓÃÒÑ¼üÈë²¿·ÖµÄ´óÐ¡Ð´×÷¡£ÕâÑù, Èç¹ûÄã¼üÈë
+ "For" ¶øVim ÕÒµ½ÁËÆ¥Åä "fortunately"£¬Ëù²úÉúµÄ½á¹û½«ÊÇ "Fortunately"¡£
 
 
 ²¹ È« ÌØ ¶¨ ÎÄ ±¾
@@ -248,8 +249,8 @@ CTRL-@ ÃüÁî»áÍê³É CTRL-A µÄ²Ù×÷ºóÍË³ö²åÈëÄ£Ê½¡£ÕâÊÇÒ»¸ö¿ìËÙÖØ¸´²åÈëÒ»Ä£Ò»ÑùµÄ
 ==============================================================================
 *24.5*	´ÓÁíÒ»ÐÐ¿½±´
 
-CTRL-Y ÃüÁî²åÈë¹â±êÉÏ·½µÄ×Ö·û¡£µ±Äã¸´ÖÆÇ°Ò»ÐÐÎÄ±¾µÄÊ±ºò£¬Õâ¸öÃüÁîºÜÓÐÓÃ¡£ÀýÈç£¬
-ÄãÓÐÕâÃ´Ò»ÐÐ C ´úÂë:
+CTRL-Y ÃüÁî²åÈë¹â±êÉÏ·½µÄ×Ö·û¡£µ±Äã¸´ÖÆÇ°Ò»ÐÐÎÄ±¾µÄÊ±ºò£¬Õâ¸öÃüÁîºÜÓÐÓÃ¡£
+ÀýÈç£¬ÄãÓÐÕâÃ´Ò»ÐÐ C ´úÂë:
 
 	b_array[i]->s_next = a_array[i]->s_next; ~
 
@@ -286,8 +287,8 @@ CTRL-E ÃüÁî²Ù×÷ÆðÀ´¸ú CTRL-Y Ò»Ñù£¬Ö»²»¹ýËü²åÈë¹â±êÏÂ·½µÄ×Ö·û¡£
 
 	"vyiw
 
-"v Ö¸¶¨¼Ä´æÆ÷£¬"yiw" ÒâË¼ÊÇ¿½±´Ò»¸ö´Ê£¬²»º¬¿Õ¸ñ (yank-inner-word)¡£ÏÖÔÚ±à¼­ÄÇ¸ö
-Òª²åÈëÒ»ÐÐ´úÂëµÄÎÄ¼þ£¬ÏÈ¼üÈë¿ªÍ·¼¸¸ö×Ö·û:
+"v Ö¸¶¨¼Ä´æÆ÷£¬"yiw" ÒâË¼ÊÇ¿½±´Ò»¸ö´Ê£¬²»º¬¿Õ¸ñ (yank-inner-word)¡£ÏÖÔÚ±à¼­ÄÇ
+¸öÒª²åÈëÒ»ÐÐ´úÂëµÄÎÄ¼þ£¬ÏÈ¼üÈë¿ªÍ·¼¸¸ö×Ö·û:
 
 	r = ~
 
@@ -339,7 +340,8 @@ Benny": >
 ËüÃÇÓÃÓÚÉú³É´ó¶Î×¢ÊÍ¡£×¢ÊÍÒÔËõÐ´ #b ¿ªÊ¼£¬»®³ö¶¥Ïß¡£½Ó×Å£¬ÎÒ¼üÈë×¢ÊÍÎÄ×Ö£¬×îºó
 ÒÔËõÐ´ #e »®³öµ×Ïß¡£
    ×¢ÒâËõÐ´ #e ÒÔÒ»¸ö¿Õ¸ñ¿ªÍ·¡£»»ÑÔÖ®£¬¿ªÍ·Á½¸ö×Ö·ûÊÇ¿Õ¸ñºÍÐÇºÅ(*)¡£Í¨³£ Vim
-ºöÂÔ²»¼ÆÎ»ÓÚËõÐ´¼°ÆäÀ©Õ¹Ö®¼äµÄ¿Õ¸ñ¡£ÎªÁË±ÜÃâ¿Õ¸ñ±»ºöÂÔ£¬ÎÒ°Ñ¿Õ¸ñÒÔÆß¸ö×Ö·û±íÊ¾:
+ºöÂÔ²»¼ÆÎ»ÓÚËõÐ´¼°ÆäÀ©Õ¹Ö®¼äµÄ¿Õ¸ñ¡£ÎªÁË±ÜÃâ¿Õ¸ñ±»ºöÂÔ£¬ÎÒ°Ñ¿Õ¸ñÒÔÆß¸ö×Ö·û±í
+Ê¾£º
 <, S, p, a, c, e, >¡£
 
 	Note:
@@ -348,8 +350,8 @@ Benny": >
 
 ¸ü Õý ´ò ×Ö ´í Îó
 
-ÎÒÃÇ¾­³£»á·¸Í¬Ò»¸ö´ó×Ö´íÎó¡£ÀýÈç£¬°Ñ "the" ´ò³É "teh"¡£Äã¿ÉÒÔÀûÓÃËõÐ´¹¦ÄÜÀ´¸üÕý
-ÕâÑùµÄ´íÎó: >
+ÎÒÃÇ¾­³£»á·¸Í¬Ò»¸ö´ó×Ö´íÎó¡£ÀýÈç£¬°Ñ "the" ´ò³É "teh"¡£Äã¿ÉÒÔÀûÓÃËõÐ´¹¦ÄÜÀ´¸ü
+ÕýÕâÑùµÄ´íÎó: >
 
 	:abbreviate teh the
 
@@ -421,20 +423,20 @@ CTRL-V ÃüÁîÓÃÀ´²åÈëÏÂÒ»¸ö×ÖÃæÒâÒåÉÏµÄ×Ö·û¡£»»ÑÔÖ®£¬ÎÞÂÛ¸Ã×Ö·û¶àÌØÊâ, ÆäÌØÊâº¬
 
 	CTRL-V <Esc>
 
-²åÈëÒ»¸ö <Esc> ×Ö·û¡£¶øÄã²¢Î´ÍÑÀë²åÈëÄ£Ê½¡£(²»ÒªÔÚ CTRL-V ºóÃæ¼üÈë¿Õ¸ñ£¬ÄÇ¸ö¿Õ¸ñ
-½ö½öÎªÁË·½±ãÔÄ¶Á)¡£
+²åÈëÒ»¸ö <Esc> ×Ö·û¡£¶øÄã²¢Î´ÍÑÀë²åÈëÄ£Ê½¡£(²»ÒªÔÚ CTRL-V ºóÃæ¼üÈë¿Õ¸ñ£¬ÄÇ¸ö¿Õ
+¸ñ½ö½öÎªÁË·½±ãÔÄ¶Á)¡£
 
 	Note:
-	ÔÚ MS-Windows »·¾³ÏÂ£¬CTRL-V ÓÃÀ´Õ³ÌùÎÄ±¾¡£ÓÃ CTRL-Q ´úÌæ CTRL-V¡£Áí
-	Ò»·½Ãæ£¬ÔÚ Unix »·¾³ÏÂ£¬CTRL-Q ÔÚÄ³Ð©ÖÕ¶ËÉÏ²»Æð×÷ÓÃ£¬ÒòÆäÁíÓÐÌØÊâÒâÒå¡£
+	ÔÚ MS-Windows »·¾³ÏÂ£¬CTRL-V ÓÃÀ´Õ³ÌùÎÄ±¾¡£ËùÒÔÓÃ CTRL-Q ´úÌæ CTRL-V¡£
+	ÁíÍâ£¬ÔÚ Unix »·¾³ÏÂ£¬CTRL-Q ÔÚÄ³Ð©ÖÕ¶ËÉÏ²»Æð×÷ÓÃ£¬ÒòÆäÁíÓÐÌØÊâÒâÒå¡£
 	
 ÄãÒ²¿ÉÒÔÓÃÃüÁî CTRL-V {digits} À´²åÈëÒ»¸öÒÔÊ®½øÎ»Êý×Ö {digits} ±íÊ¾µÄ×Ö·û¡£Àý
 Èç£¬×Ö·û±àÂë 127 ÊÇ×Ö·û <Del> (µ«²¢²»Ò»¶¨ÊÇ <Del> ¼ü!)¡£Òª²åÈë <Del>, ¼üÈë: >
 
 	CTRL-V 127
 
-Äã¿ÉÒÔÓÃÕâÑùµÄ·½·¨ÊäÈëÊýÖµ²»³¬¹ý 255 µÄ×Ö·û¡£µ±Äã¼üÈëÒ»¸ö²»×ãÁ½Î»µÄÊý×ÖÊ±£¬¾ÍÒª
-Ìí¼ÓÒ»¸ö·ÇÊý×ÖµÄ×Ö·ûÀ´½áÊøÃüÁî¡£ÎªÁË»Ø±ÜÕâ¸ö·ÇÊý×Ö×Ö·ûµÄÒªÇó£¬ÔÚËüÇ°Ãæ¼ÓÒ»»ò
+Äã¿ÉÒÔÓÃÕâÑùµÄ·½·¨ÊäÈëÊýÖµ²»³¬¹ý 255 µÄ×Ö·û¡£µ±Äã¼üÈëÒ»¸ö²»×ãÁ½Î»µÄÊý×ÖÊ±£¬¾Í
+ÒªÌí¼ÓÒ»¸ö·ÇÊý×ÖµÄ×Ö·ûÀ´½áÊøÃüÁî¡£ÎªÁË»Ø±ÜÕâ¸ö·ÇÊý×Ö×Ö·ûµÄÒªÇó£¬ÔÚËüÇ°Ãæ¼ÓÒ»»ò
 Á½¸öÁãÒÔÂú×ãÈýÎ»ÊýµÄÒªÇó¡£
    ÒÔÏÂÃüÁî¶¼²åÈëÒ»¸ö <Tab> ×Ö·û£¬È»ºóÒ»¸öµã×Ö·û:
 
@@ -474,10 +476,11 @@ Vim ½«°Ñ¶þÔª×Ö·û±íÏÔÊ¾ÔÚÆÁÄ»ÉÏ¡£ÒÔÏÂ¾ÍÊÇÆäÖÐµÄÈýÐÐ:
 
 ÕâÕÅ±í¸æËßÄã£¬±ÈÈç, Äã¼üÈë CTRL-K Pd ËùµÃµ½µÄ¶þÔª×Ö·ûÊÇ×Ö·û (£)¡£¸Ã×Ö·û±àÂëÎª 
 163(Ê®½øÖÆ)¡£
-   Pd ÊÇ Pound (Ó¢°÷)µÄ¼òÐ´¡£´ó¶àÊý¶þÔª×Ö·ûÈÃÄãÒ»¿´¾Í²Âµ½Á½¸ö×Ö·ûÉú³ÉÊ²Ã´×Ö·û¡£
-Èç¹ûÄãÒ»¸ö¸ö¶ÁÏÂÀ´£¬±ã²»ÄÑÀí½âÆäÖÐµÄÂß¼­¡£
-   Äã¿ÉÒÔ½»»»Á½¸ö×Ö·ûµÄË³Ðò£¬Ö»ÒªÄÇÑù×éºÏ²»´ú±íÁíÒ»¸ö¶þÔª×Ö·û¡£ Òò´Ë CTRL-K dP 
-Ò²Ã»ÎÊÌâ¡£ÓÉÓÚ "dP" ²»ÊÇ¶þÔª×Ö·û£¬Vim »á×ª¶øËÑË÷±íÊ¾³É "Pd" µÄ¶þÔª×Ö·û¡£
+   Pd ÊÇ Pound £¨Ó¢°÷£©µÄ¼òÐ´¡£´ó¶àÊý¶þÔª×Ö·ûÈÃÄãÒ»¿´¾Í²Âµ½Á½¸ö×Ö·ûÉú³ÉÊ²Ã´×Ö
+·û¡£Èç¹ûÄãÒ»¸ö¸ö¶ÁÏÂÀ´£¬±ã²»ÄÑÀí½âÆäÖÐµÄÂß¼­¡£
+   Äã¿ÉÒÔ½»»»Á½¸ö×Ö·ûµÄË³Ðò£¬Ö»ÒªÄÇÑù×éºÏ²»´ú±íÁíÒ»¸ö¶þÔª×Ö·û¡£ Òò´Ë
+CTRL-K dP Ò²Ã»ÎÊÌâ¡£ÓÉÓÚ "dP" ²»ÊÇ¶þÔª×Ö·û£¬Vim »á×ª¶øËÑË÷±íÊ¾³É "Pd" µÄ¶þÔª
+×Ö·û¡£
 
 	Note:
 	¶þÔª×Ö·û±íÈ¡¾öÓÚ Vim ¼Ù¶¨ÄãËùÊ¹ÓÃµÄ×Ö·û¼¯¡£ÔÚ MS-DOS ÏµÍ³ÉÏ²ÉÓÃµÄ¶þÔª

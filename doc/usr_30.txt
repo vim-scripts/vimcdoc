@@ -522,11 +522,12 @@ Vim 脚本中是 " 。比如，要使 Vim 理解 C++ 注释：
 设定了 "n" 标志，这意味着注释可以套嵌。也就是说，一个以 ">" 开始的行可以在 ">"
 之后包括其它的注视符号。这样就可以用来排列下面的文本了：
 
-	> ! 你看到那个网站了吗? ~
-	> ! 很漂亮。~
-	> 我不喜欢。~
-	> 颜色太糟了. ~
-	你去的是那个网址? ~
+        > ! Did you see that site? ~
+	> ! It looks really great. ~
+	> I don't like it.  The ~
+	> colors are terrible. ~
+	What is the URL of that ~
+	site? ~
 
 试着将 'textwidth' 设定为其它的值，例如 80。在可视模式下选中注释，然后输入"gq"。
 结果为：

@@ -1,33 +1,52 @@
 *mbyte.txt*     For Vim version 6.1.  Last change: 2002 Feb 28
+                                      ×î½ü¸üĞÂ£º2004 Jan 13
 
-
-		  VIM REFERENCE MANUAL	  by Bram Moolenaar et al.
+                VIM REFERENCE MANUAL	  by Bram Moolenaar et al.
+                <ÒëÕß:yemao http://vimcdoc.sf.net>
 
 
 Multi-byte support				*multibyte* *multi-byte*
 						*Chinese* *Japanese* *Korean*
+¶à×Ö½ÚÖ§³Ö                                      *¶à×Ö½Ú**¶à×Ö½Ú×Ö*
+                                                *ººÓï* *ÈÕÓï* *³¯ÏÊÓï*
 This is about editing text in languages which have many characters that can
 not be represented using one byte (one octet).  Examples are Chinese, Japanese
 and Korean.  Unicode is also covered here.
+ÕâÊÇ¹ØÓÚÓÃĞèÒª¶à×Ö½ÚÖ§³Ö¶ø²»ÊÇµ¥×Ö½ÚÖ§³ÖÓïÑÔ±à¼­ÎÄ¼şµÄËµÃ÷£¬¶à×Ö½ÚÓïÑÔ°üº¬ÓĞººÓï£¬
+ÈÕÓï£¬³¯ÏÊÓï£¬Í¬Ê±Ò²°üº¬Unicode.
 
 For an introduction to the most common features, see |usr_45.txt| in the user
 manual.
 For changing the language of messages and menus see |mlang.txt|.
 
 {not available when compiled without the +multi_byte feature}
+ÁË½â¸ü¶àÒ»°ãÌØµãµÄ½éÉÜ£¬Çë²Î¿¼ÓÃ»§ÊÖ²á|usr_45.txt|.
+ÈçºÎ¸ü¸Ä²Ëµ¥ÓïÑÔºÍĞÅÏ¢ÓïÑÔ£¬Çë²Î¿¼|mlang.txt|.
+×¢Òâ£ºÈç¹û±àÒëÊ±Ã»ÓĞ¼ÓÈëmulti_byte²ÎÊı£¬vim½«²»Ö§³Ö¶à×Ö½Ú¡£
 
 
 1.  Getting started			|mbyte-first|
+1.¿ªÊ¼                                  |mbyte-first|
 2.  Locale				|mbyte-locale|
+2.±¾µØ»¯                                |mbyte-locale|
 3.  Encoding				|mbyte-encoding|
+3.±àÂë                                  |mbyte-encoding|
 4.  Using a terminal			|mbyte-terminal|
+4.Ê¹ÓÃÖÕ¶Ë                              |mbyte-terminal|
 5.  Fonts on X11			|mbyte-fonts-X11|
+5.X11µÄ×ÖÌå                             |mbyte-fonts-X11|
 6.  Fonts on MS-Windows			|mbyte-fonts-MSwin|
+6.MS-WindowsµÄ×ÖÌå                      |mbyte-fonts-MSwin|
 7.  Input on X11			|mbyte-XIM|
+7.ÔÚX11ÏÂÊäÈë                           |mbyte-XIM|
 8.  Input on MS-Windows			|mbyte-IME|
+8.ÔÚMS-WindowsÏÂÊäÈë                    |mbyte-IME|
 9.  Input with a keymap			|mbyte-keymap|
+9.ÓÃ¼üÅÌÊäÈë                            |mbyte-keymap|
 10. Using UTF-8				|mbyte-utf8|
+10.Ê¹ÓÃUTF-8                            |mbyte-utf8|
 11. Overview of options			|mbyte-options|
+11.ÌØµã×ÜÊö                             |mbyte-options|
 
 ==============================================================================
 1. Getting started					*mbyte-first*
@@ -38,7 +57,10 @@ doesn't work you will have to read the rest.  Don't be surprised if it takes
 quite a bit of work and experimenting to make Vim use all the multi-byte
 features.  Unfortunately, every system has its own way to deal with multibyte
 languages and it is quite complicated.
-
+1.¿ªÊ¼                          *mbyte-first*
+ÕâÊÇVim¶à×Ö½ÚÌØµãµÄ×ÜÌå½éÉÜ¡£ĞÒÔËµÄ»°£¬ÄãµÄvimÃ»ÓĞ¶à´óµÄÎÊÌâ£¬Ò»ÇĞÔËĞĞÕı³££¬Èç¹û
+²»Õı³££¬ÇëÔÄ¶ÁÒÔÏÂÄÚÈİ¡£²»Òª¾ªÑÈÄã»¨ÁËºÜ¶àÊ±¼ä£¬¾­¹ı¶à´ÎÊÔÑé²ÅÊ¹vimÖ§³Ö¶à×Ö½Ú£¬
+ÒòÎª²»ĞÒµÄÊÇ£¬Ã¿¸öÏµÍ³¶¼ÓĞÒ»Ì××Ô¼º´¦Àí¶à×Ö½ÚÓïÑÔµÄ·½·¨£¬¶øÇÒ·Ç³£¸´ÔÓ¡£
 
 COMPILING
 
@@ -48,7 +70,10 @@ is included.  The |:version| command can be used for this.
 If +multi_byte is not included, you should compile Vim with "big" features.
 You can further tune what features are included.  See the INSTALL files in the
 source directory.
-
+±àÒë
+Èç¹ûÄãÓĞ±àÒëºÃµÄVim£¬¼ì²éËüÊÇ·ñ°üº¬|+multi_byte|ÌØĞÔ£¬|:version|ÃüÁî¿ÉÒÔ×öµ½ÕâÒ»µã¡£
+Èç¹û²»°üº¬£¬ÄãĞèÒªÖØĞÂ±àÒëvim£¬Í¬Ê±¼ÓÉÏ¡°big¡±ÌØĞÔ¡£ÄãÒ²¿ÉÒÔ²é¿´»¹ÓĞÄÄĞ©ÌØĞÔ£¬¾ßÌå
+Çë²é¿´Ô´´úÂëÖĞµÄINSTALL.
 
 LOCALE
 
@@ -58,6 +83,10 @@ away.  If not, you can often make it work by setting the $LANG environment
 variable in your shell: >
 
 	setenv lang ja_JP.EUC
+±¾µØ»¯
+Ê×ÏÈ£¬È·ÈÏµ±Ç°µÄlocaleÉèÖÃÕıÈ·¡£Èç¹ûÏµÍ³°²×°µÄÓïÑÔºÍÄã½«Ê¹ÓÃµÄÓïÑÔÒ»ÖÂ£¬Ëü½«»áÕı³£¹¤
+×÷¡£·ñÔò£¬ÄãĞèÒªÔÚshellÀïÃæÉèÖÃ$LNAG±äÁ¿À´Ê¹ËüÕı³£¹¤×÷£º
+        setenv lang ja_JP.EUC
 
 Unfortunately, the name of the locale depends on your system.  Japanese might
 also be called "ja_JP.EUCjp" or just "ja".  To see what is currently used: >
@@ -67,12 +96,20 @@ also be called "ja_JP.EUCjp" or just "ja".  To see what is currently used: >
 To change the locale inside Vim use: >
 
 	:language ja_JP.EUC
+ºÜ²»ĞÒ£¬localeµÄÃû×ÖÈ¡¾öÓÚÄãµÄÏµÍ³¡£JapaneseÒ²¿ÉÄÜ±»½Ğ×ö¡°ja_JP.EUCjp¡±»òÕß
+¡°ja¡±¡£²é¿´µ±Ç°µÄÓïÑÔ£º>
+        :language
+ĞŞ¸ÄvimËùÓÃµÄlocale£º
+        :language ja_JP.EUC
 
 Vim will give an error message if this doesn't work.  This is a good way to
 experiment and find the locale name you want to use.  But it's always better
 to set the locale in the shell, so that it is used right from the start.
 
 See |mbyte-locale| for details.
+Èç¹ûÉèÖÃµÄlocale²»ÄÜ¹¤×÷£¬vim½«»á¸ø³ö´íÎóĞÅÏ¢¡£ÒªÕÒ³öµ±Ç°Ê¹ÓÃµÄlocale£¬ÕâÊÇÒ»¸öºÃ
+°ì·¨¡£²»¹ı×îºÃÊÇÔÚshellÀïÃæÉèÖÃlocale£¬ÄÇÑù£¬Æô¶¯µÄÊ±ºò¾Í¿ÉÒÔÕı³£Ê¹ÓÃ¡£
+¾ßÌåÇë¿´|mbyte-locale|¡£
 
 
 ENCODING
@@ -83,6 +120,11 @@ accordingly.  If this doesn't work you can overrule its value: >
 	:set encoding=utf-8
 
 See |encoding-values| for a list of acceptable values.
+±àÂë
+Èç¹ûlocaleÕı³£¹¤×÷£¬vimËæºó½«ÉèÖÃ¡®encoding¡¯£¬Èç¹û²»ÄÜÊ¹ÓÃ£¬Äã¿ÉÒÔÖØĞÂ
+ÉèÖÃÀ´È¡´úËü:>
+        :set encoding=utf-8
+|encoding-values|°üº¬ÁË¿ÉÒÔÊ¹ÓÃµÄÖµ¡£
 
 The result is that all the text that is used inside Vim will be in this
 encoding.  Not only the text in the buffers, but also in registers, variables,
@@ -92,6 +134,11 @@ text invalid!  The text doesn't change, but it will be displayed wrong.
 You can edit files in another encoding than what 'encoding' is set to.  Vim
 will convert the file when you read it and convert it back when you write it.
 See 'fileencoding', 'fileencodings' and |++enc|.
+ÉèÖÃÖ®ºó£¬ÕıÔÚÓÃvim±à¼­µÄÎÄ¼ş½«Ê¹ÓÃÕâÖÖ±àÂë¡£²»½ö½öÊÇ»º³åÇøµÄÎÄ¼ş£¬¼Ä´æÆ÷£¬±äÁ¿
+¶¼»áÊ¹ÓÃÕâÖÖ±àÂë¡£ÕâÒ²ÒâÎ¶×Å¡®encoding¡¯µÄ¸Ä±äÊ¹ÎÄ¼ş¸Ä±ä£¬²»¹ı²»ÊÇÄÚÈİµÄ±ä»¯£¬
+¶øÊÇ²»ÄÜÕı³£ÏÔÊ¾¡£
+Äã¿ÉÒÔÔÚÁíÒ»ÖÖ±àÂëÏÂ±à¼­ÎÄ¼ş£¬vimÔÚ¶ÁÎÄ¼şµÄÊ±ºò°ÑËü×ª±ä³ÉÁíÒ»ÖÖ±àÂë£¬°´Ô­À´µÄ±àÂë
+±£´æÎÄ¼ş¡£¾ßÌåÇë¿´¡®fileencoding¡¯¡®fileencodings¡¯ºÍ¡®++enc¡¯.
 
 
 DISPLAY AND FONTS
@@ -104,11 +151,18 @@ For the GUI you must select fonts that work with the current 'encoding'.  This
 is the difficult part.  It depends on the system you are using, the locale and
 a few other things.  See the chapters on fonts: |mbyte-fonts-X11| for
 X-Windows and |mbyte-fonts-MSwin| for MS-Windows.
+×ÖÌåºÍÏÔÊ¾
+Èç¹ûÊ¹ÓÃÖÕ¶Ë£¬Äã±ØĞëÈ·¶¨ÖÕ¶Ë¿ÉÒÔÊ¹ÓÃvimËùÊ¹ÓÃµÄ±àÂë¡£·ñÔòÄã±ØĞëĞŞ¸Ä¡®termencoding¡¯
+Ê¹vim×Ô¶¯×ª»¯ÎÄ¼ş±àÂë¡£
+ÔÚGUIÏÂ£¬Äã±ØĞëÑ¡ÔñÔÚµ±Ç°±àÂëÏÂ¿ÉÒÔÊ¹ÓÃµÄ×ÖÌå¡£ÕâºÍÖÕ¶ËÓĞËù²»Í¬¡£ËüºÍÄãÓÃµÄÏµÍ³£¬
+localeºÍÒ»Ğ©ÆäËüµÄ¶«Î÷ÓĞ¹Ø¡£¾ßÌåÇë¿´|mbyte-fonts-X11|ºÍ|mbyte-fonts-MSwin|.
 
 For X11 you can set the 'guifontset' option to a list of fonts that together
 cover the characters that are used.  Example for Korean: >
 
 	:set guifontset=k12,r12
+ÔÚX11ÏÂ£¬Äã¿ÉÒÔÉèÖÃ¡®guifontset¡¯,°ÑÒªÊ¹ÓÃµÄ×ÖÌåĞ´ÈëÁĞ±í¡£ÒÔ³¯ÏÊÓïÎªÀı£º
+        :set guifontset=k12,r12
 
 Alternatively, you can set 'guifont' and 'guifontwide'.  'guifont' is used for
 the single-width characters, 'guifontwide' for the double-width characters.
@@ -120,7 +174,12 @@ Example for UTF-8: >
 
 You can also set 'guifont' alone, Vim will try to find a matching
 'guifontwide' for you.
-
+Í¬Ê±£¬Äã¿ÉÒÔÉèÖÃ¡®guifont¡¯ºÍ¡®guifontwide¡¯¡£¡®guifont¡¯ÉèÖÃsingle-width×ÖÌå£¬¡®guifontwide¡¯
+À´ÉèÖÃdouble-width×ÖÌå¡£Òò´Ë£¬¡®guifontwide¡¯×ÖÌåµÄ¿í¶ÈÊÇ¡®guifont¡¯×ÖÌåµÄ¶ş±¶¡£
+ÒÔUTF-8ÎªÀı:>
+        :set guifont=-misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1
+        :set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1
+ÄãÒ²¿ÉÒÔÖ»ÉèÖÃ¡®guifont¡¯£¬wim½«×Ô¶¯ÉèÖÃ¡®guifontwide¡¯¡£
 
 INPUT
 
@@ -131,6 +190,13 @@ There are several ways to enter multi-byte characters:
 
 The options 'iminsert', 'imsearch' and 'imcmdline' can be used to chose
 the different input medhods or disable them temporarily.
+ÊäÈë
+ÏÖÔÚÓĞ¶àÖÖ·½·¨ÊäÈë¶à×Ö½Ú×Ö
+-ÔÚX11ÏÂ£¬XIM¿ÉÒÔÊäÈë¶à×Ö½Ú×Ö£¬¾ßÌåÇë¿´|XIM|.
+-ÔÚMS-WindowsÏÂ£¬IME¿ÉÒÔÊäÈë¶à×Ö½Ú£¬¾ßÌåÇë¿´|IME|¡£
+-¼üÅÌÔÚËùÓĞµÄÏµÍ³ÏÂ¶¼¿ÉÒÔÊäÈë¡£¾ßÌåÇë¿´|mbyte-keymap|¡£
+ÉèÖÃ¡®iminsert¡¯¡®imsearch¡¯¡®imcmdline¡¯¿ÉÒÔÑ¡Ôñ²»Í¬µÄÊäÈë·½·¨£¬Ò²¿ÉÒÔ
+ÁÙÊ±½ûÓÃËüÃÇ¡£
 
 ==============================================================================
 2.  Locale						*mbyte-locale*
@@ -138,6 +204,8 @@ the different input medhods or disable them temporarily.
 The easiest setup is when your whole system uses the locale you want to work
 in.  But it's also possible to set the locale for one shell you are working
 in, or just use a certain locale inside Vim.
+ ×î¼òµ¥µÄÉèÖÃ¾ÍÊÇÏµÍ³Ê¹ÓÃÄãÏëÓÃµÄlocale£¬²»¹ıÄãÒ²¿ÉÒÔÉèÖÃÄãËùÊ¹ÓÃµÄshellµÄlocale£¬
+»òÕßÔÚvimÖĞÊ¹ÓÃÒ»¶¨µÄlocale¡£
 
 
 WHAT IS A LOCALE?					*locale*
@@ -148,6 +216,9 @@ environment corresponding to an area is called "locale".  This includes
 information about the used language, the charset, collating order for sorting,
 date format, currency format and so on.  For Vim only the language and charset
 really matter.
+ÊÀ½çÉÏÓĞºÜ¶àÖÖÓïÑÔ£¬¶ø²»Í¬µÄÎÄ»¯ºÍ»·¾³µÄÊıÁ¿ÖÁÉÙÓĞÓïÑÔµÄÖÖÀàÄÇÃ´¶à¡£Ò»¸öµØÇø¶ÔÓ¦
+µÄÓïÑÔ»·¾³¾Í½Ğ¡°locale¡±£¬Ëü°üÀ¨ËùÊ¹ÓÃµÄÓïÑÔ£¬ÎÄ×Ö£¬ÅÅĞò¹æÔò£¬Ê±¼ä¸ñÊ½£¬»õ±Ò¸ñÊ½
+µÈĞÅÏ¢£¬vimÖ»ºÍÓïÑÔºÍÎÄ×ÖÓĞ¹Ø¡£
 
 You can only use a locale if your system has support for it.  Some systems
 have only a few locales, especially in the USA.  The language which you want
@@ -157,6 +228,10 @@ it as an extra package.  Check your system documentation for how to do that.
 The location in which the locales are installed varies from system to system.
 For example, "/usr/share/locale" or "/usr/lib/locale".  See your system's
 setlocale() man page.
+ÄãÖ»ÄÜÊ¹ÓÃÏµÍ³Ö§³ÖµÄlocale£¬ÓĞµÄÏµÍ³µÄÖ»ÓĞºÜÉÙµÄlocale£¬ÔÚÃÀ¹úÌØ±ğÈç´Ë¡£Ò²ĞíÄã
+ÏëÊ¹ÓÃµÄÓïÑÔÏµÍ³Ã»ÓĞ£¬ÕâÑùÄã¾ÍĞèÒª°ÑËüµ±Ò»¸ö¶îÍâµÄ°üÀ´°²×°£¬¾ßÌåÇë°´ÏµÍ³ÎÄµµ²Ù×÷¡£
+²»Í¬µÄÏµÍ³°²×°localeµÄÎ»ÖÃÒ²²»Í¬£¬ÀıÈç£¬¡°/usr/share/locale¡±»òÕß¡°/usr/lib/locale¡±,
+¾ßÌåÇë¿´setlocale()µÄmanÎÄµµ¡£
 
 Looking in these directories will show you the exact name of each locale.
 Mostly upper/lowercase matters, thus "ja_JP.EUC" and "ja_jp.euc" are
@@ -168,22 +243,38 @@ names different from what is used elsewhere.  This is confusing!  For Vim it
 matters what the setlocale() function uses, which is generally NOT the
 X-windows stuff.  You might have to do some experiments to find out what
 really works.
+ÔÚÕâĞ©Ä¿Â¼ÀïÄã¿ÉÒÔ¿´µ½Ã¿¸ölocaleµÄÈ«³Æ£¬ËüÃÇÒ²Çø±ğ´óĞ¡Ğ´£¬Òò´Ë¡°ja_JP.EUC¡±ºÍ
+¡°ja_jp.euc¡±²»Í¬¡£ÓĞµÄÏµÍ³ÓĞÒ»¸ölocale.aliasÎÄ¼ş£¬ËüÔÊĞíÒ»¸ö¼ò³ÆÈç¡°nl¡±ºÍËüµÄ
+È«³Æ¡°nl_NL.ISO_8859-1¡±×ª»¯¡£
+×¢ÒâX-windowsÓĞ×Ô¼ºµÄlocaleÉèÖÃ£¬²»ĞÒµÄÊÇËüÊ¹ÓÃµÄlocaleÃûÒ²ºÍÆäËüµØ·½²»Í¬¡£
+Õâ·Ç³£»ìÂÒ£¡vimÊ¹ÓÃsetlocale()µÄÉèÖÃ£¬¶øËü²»ÊÇX-windowsµÄstuff£¬Ò²ĞíÄãĞèÒª¾­¹ı
+¶à´Î²âÊÔÀ´ÕÒ³öX-windowsÊ¹ÓÃµÄlocale¡£
 
-							*locale-name*
+						*locale-name*
 The (simplified) format of |locale| name is:
 
 	language
 or	language_territory
 or	language_territory.codeset
+localeÃûµÄ¼òµ¥µÄ¸ñÊ½ÊÇ
+        language
+»òÕß    language_territory
+»òÕß    language_territory.codeset
 
 Territory means the country (or part of it), codeset means the |charset|.  For
 example, the locale name "ja_JP.eucJP" means:
 	ja	the language is Japanese
 	JP	the country is Japan
 	eucJP	the codeset is EUC-JP
+Territory±íÊ¾¹ú¼Ò(»òÕßËüµÄÒ»²¿·İ)£¬codeset±íÊ¾ÎÄ×Ö¡£ÀıÈç£¬¡°ja_JP.eucJP¡±±íÊ¾
+        ja      ÓïÑÔÊÇJapanese
+        JP      ¹ú¼ÒÊÇJapan
+        ecuJP   ÎÄ×ÖÊÇEUC-JP
 But it also could be "ja", "ja_JP.EUC", "ja_JP.ujis", etc.  And unfortunately,
 the locale name for a specific language, territory and codeset is not unified
 and depends on your system.
+²»¹ıËüÒ²¿ÉÒÔÊÇ¡°ja¡±£¬¡°ja_JP.EUC¡±£¬¡°ja_JP.ujis¡±µÈµÈ£¬Ôã¸âµÄÊÇ£¬localeÃû¶Ô
+Ò»¸öÌØ¶¨µÄÓïÑÔ£¬¹ú¼ÒºÍÎÄ×ÖÊÇ²»Í³Ò»µÄ£¬ËüÈ¡¾öÓÚÄãµÄÏµÍ³¡£
 
 Examples of locale name:
     charset	    language		  locale name ~
@@ -193,12 +284,21 @@ Examples of locale name:
     EUC-JP	    Japanese		  ja, ja_JP.EUC, ja_JP.ujis, ja_JP.eucJP
     Shift_JIS	    Japanese		  ja_JP.SJIS, ja_JP.Shift_JIS
     EUC-KR	    Korean		  ko, ko_KR.EUC
-
+Àı×ÓÈçÏÂ£º
+    ÎÄ×Ö            ÓïÑÔ                  localeÃû
+    GB2312	    Chinese (simplified)  zh_CN.EUC, zh_CN.GB2312
+    Big5	    Chinese (traditional) zh_TW.BIG5, zh_TW.Big5
+    CNS-11643	    Chinese (traditional) zh_TW
+    EUC-JP	    Japanese		  ja, ja_JP.EUC, ja_JP.ujis, ja_JP.eucJP
+    Shift_JIS	    Japanese		  ja_JP.SJIS, ja_JP.Shift_JIS
+    EUC-KR	    Korean		  ko, ko_KR.EUC
 
 USING A LOCALE
 
 To start using a locale for the whole system, see the documentation of your
 system.  Mostly you need to set it in a configuration file in "/etc".
+Ê¹Õû¸öÏµÍ³Ê¹ÓÃÒ»¸ölocale£¬Çë¿´ÏµÍ³ÎÄµµ¡£´ó²¿·ÖÇé¿öÄãĞèÒªÔÚ¡°/etc¡±ÏÂµÄÅäÖÃ
+ÎÄ¼şÖĞÉèÖÃËü¡£
 
 To use a locale in a shell, set the $LANG environment value.  When you want to
 use Korean and the |locale| name is "ko", do this:
@@ -207,12 +307,19 @@ use Korean and the |locale| name is "ko", do this:
     csh:   setenv LANG ko
 
 You can put this in your ~/.profile or ~/.cshrc file to always use it.
+ÔÚshellÀïÊ¹ÓÃÒ»¸ölocale£¬ÉèÖÃ$LANG»·¾³±äÁ¿¡£ÄãÏëÊ¹ÓÃº«Óï£¬localeÃûÎª¡°ko¡±£¬
+    sh:    export LANG=ko
+    csh:   setenv LANG ko
+Òª¾­³£Ê¹ÓÃËü£¬°ÑËüÃÇĞ´½ø~/.profile»òÕß~/.cshrcÖĞ¡£
 
 To use a locale in Vim only, use the |:language| command: >
 
 	:language ko
 
 Put this in your ~/.vimrc file to use it always.
+Ö»ÔÚvimÖĞÊ¹ÓÃÒ»¸ölocale£¬ÓÃlanguageÃüÁî:>
+        :language ko
+°ÑËüĞ´½ø~/.vimrcĞ´½ø¾Í¿ÉÒÔ¾­³£Ê¹ÓÃ¡£
 
 Or specify $LANG when starting Vim:
 
@@ -220,6 +327,9 @@ Or specify $LANG when starting Vim:
    csh:	  env LANG=ko vim {vim-arguments}
 
 You could make a small shell script for this.
+»òÕßÔÚÆô¶¯vimµÄÊ±ºòÉèÖÃ$LANG:
+   sh:    LANG=ko vim {vim-arguments}
+   csh:   env LANG=ko vim {vim-arguments}
 
 ==============================================================================
 3.  Encoding				*mbyte-encoding*
@@ -228,6 +338,8 @@ Vim uses the 'encoding' option to specify how characters identified and
 encoded when they are used inside Vim.  This applies to all the places where
 text is used, including buffers (files loaded into memory), registers and
 variables.
+VimÓÃ¡®encoding¡¯À´ÉèÖÃvimÊ¶±ğ×Ö·ûºÍ±àÂëµÄ·½·¨¡£Õâ¸öÉèÖÃ¶ÔÎÄ±¾Ê¹ÓÃµÄµØ·½¶¼ÓĞ
+Ğ§£¬°üÀ¨buffers(ÎÄ¼şÔØÈëÄÚ´æ)£¬registersºÍvariables¡£
 
 							*charset* *codeset*
 Charset is another name for encoding.  There are subtle differences, but these
@@ -237,6 +349,11 @@ Each characters is encoded as one or more bytes.  When all characters are
 encoded with one byte, we call this a single-byte encoding.  The most often
 used one is called "latin1".  This limits the number of characters to 256.
 Some of these are control characters, thus even fewer can be used for text.
+CharsetÊÇencodingµÄÁíÒ»ÖÖ½Ğ·¨£¬ËüÃÇÓĞÒ»µãºÜĞ¡µÄÇø±ğ£¬µ«ÊÇvimÓëÕâ¸öÎŞ¹Ø¡£¡°codeset¡±
+ÊÇËüµÄÁíÒ»¸ö±ğÃû¡£
+Ã¿¸ö×Ö·û¶¼±»encoded³ÉÒ»¸ö»òÕßÁ½¸öbyte¡£ËùÓĞµÄ×Ö·û¶¼±»±àÂë³ÉÒ»¸ö×Ö½Ú£¬ÎÒÃÇ¾Í½ĞËüÎª
+single-byte±àÂë¡£×î³£ÓÃµÄÊÇ¡°latin1¡±¡£Ëü°Ñ¿ÉÓÃµÄ×Ö·ûÊıÏŞÖÆÎª256£¬ÆäÖĞ»¹ÓĞÒ»²¿·Ö
+¿ØÖÆ×Ö·û£¬ÕâÊ¹µÃÓÃÓÚÎÄ±¾µÄ×Ö·ûÊı¸üÉÙ¡£
 
 When some characters use two or more bytes, we call this a multi-byte
 encoding.  This allows using much more than 256 characters, which is required
@@ -246,6 +363,11 @@ Most multi-byte encodings use one byte for the first 127 characters.  These
 are equal to ASCII, which makes it easy to exchange plain-ASCII text, no
 matter what language is used.  Thus you might see the right text even when the
 encoding was set wrong.
+µ±ÓĞµÄ×Ö·ûÊ¹ÓÃÁ½¸ö»ò¸ü¶à×Ö½Ú£¬ÎÒÃÇ½ĞËümulti-byte±àÂë£¬ËüÔÊĞí¸ü¶àµÄ×Ö·û£¬Õâ·ûºÏ
+´ó¶àÊı¶«·½¹ú¼ÒµÄÒªÇó¡£
+¶àÊımulti-byte±àÂëÊ¹ÓÃ¿ªÊ¼µÄ127¸ö×Ö·û×÷ÎªÒ»¸ö×Ö½Ú£¬ÕâºÍASCIIÏàÍ¬£¬Ê¹µÃ×ª»¯
+plain-ASCII±äµÃÈİÒ×£¬²»¹ÜÄãÊ¹ÓÃÄÄÖÖÓïÑÔ£¬ËùÒÔ¾ÍËãÄãµÄencodingÉèÖÃ´íÁË£¬ÄãÒ²¿ÉÒÔ
+¿´µ½ÕıÈ·µÄÎÄ±¾¡£
 
 							*encoding-names*
 Vim can use many different character encodings.  There are three major groups:
@@ -253,22 +375,33 @@ Vim can use many different character encodings.  There are three major groups:
 1   8bit	Single-byte encodings, 256 different characters.  Mostly used
 		in USA and Europe.  Example: ISO-8859-1 (Latin1).  All
 		characters occupy one screen cell only.
+Vim¿ÉÒÔÊ¹ÓÃ¶àÖÖ²»Í¬µÄ×Ö·û±àÂë£¬Ö÷ÒªÓĞÒÔÏÂÈıÖÖ£º
+1   8bit        Single-byte±àÂë£¬256¸ö²»Í¬µÄ×Ö·û¡£Ö÷ÒªÊÇÃÀ¹úºÍÅ·ÖŞÊ¹ÓÃ¡£ÀıÈç£º
+                ISO-8859-1(Latin1)£¬ËùÓĞµÄ×Ö·ûÕ¼Ò»¸öscreen cell¡£
 
 2   2byte	Double-byte encodings, over 10000 different characters.
 		Mostly used in Asian countries.  Example: euc-kr (Korean)
 		The number of screen cells is equal to the number of bytes
 		(except for euc-jp when the first byte is 0x8e).
+2   2byte       Double-byte±àÂë£¬³¬¹ı10000¸ö×Ö·û¡£Ö÷ÒªÊÇÑÇÖŞ¸÷¹úÊ¹ÓÃ¡£ÀıÈç£º
+                euc-kr(Korean)¡£ËùÕ¼µÄscreen cellÊıºÍbyteÊıÏàÍ¬¡£(euc-jpÀıÍâ£¬Ëü
+                µÄµÚÒ»¸ö×Ö½ÚÊÇ0x8e)¡£
 
 u   Unicode	Universal encoding, can replace all others.  ISO 10646.
 		Millions of different characters.  Example: UTF-8.  The
 		relation between bytes and screen cells is complex.
+u   Unicode     Universal±àÂë£¬¿ÉÒÔÈ¡´úÆäËüµÄ±àÂë¡£Èç£ºISO 10646.
+                ÓĞ¼¸°ÙÍò¸ö×Ö·û¡£ÀıÈç£ºUTF-8.bytesºÍscreen cellµÄ¹ØÏµºÜ¸´ÔÓ¡£
 
 Other encodings cannot be used by Vim internally.  But files in other
 encodings can be edited by using conversion, see 'fileencoding'.
 Note that all encodings must use ASCII for the characters up to 128 (except
 when compiled for EBCDIC).
+ÆäËüµÄ±àÂë²»ÄÜÔÚVimÄÚ²¿Ê¹ÓÃ£¬ÒÔÆäËü·½Ê½±àÂëµÄÎÄ¼şĞèÒª×ª»¯²ÅÄÜÓÃvim±à¼­£¬¾ßÌå
+Çë¿´¡®fileencoding¡¯¡£×¢ÒâËùÓĞµÄ±àÂë¶¼±ØĞëÓÃASCII°Ñ×Ö·ûÊı±ä³É128¸ö(±àÒë³ÉEBCDIC³ıÍâ)¡£
 
 Supported 'encoding' values are:			*encoding-values*
+Ö§³ÖµÄ±àÂëÈçÏÂ£º
 1   latin1	8-bit characters (ISO 8859-1)
 1   iso-8859-n	ISO_8859 variant (n = 2 to 15)
 1   koi8-r	Russian
@@ -301,9 +434,12 @@ For MS-Windows "cp{number}" means using codepage {number}.
 Examples: >
 		:set encoding=8bit-cp1252
 		:set encoding=2byte-cp932
+{name}Ö»ÄÜÊÇÏµÍ³Ö§³ÖµÄ±àÂëÃû£¬ÓÃiconv()°ÑÎÄ¼şµÄ±àÂë·½Ê½±ä³Éµ±Ç°µÄ±àÂë·½Ê½Ò²°üº¬ÔÚ
+ÆäÖĞ¡£¶ÔMS-WindowsÀ´Ëµ£¬¡°cp{number}¡±ÒâÎ¶×ÅÊ¹ÓÃcodepage{number}¡£
 <
 Several aliases can be used, they are translated to one of the names above.
 An incomplete list:
+Ò²¿ÉÒÔÊ¹ÓÃ±ğÃû£¬ÒÔÏÂÊÇÉÏÃæ±àÂëÃûµÄ×ª»¯µÄ²»ÍêÈ«ÁĞ±í£º
 
 1   ansi	same as latin1 (obsolete, for backward compatibility)
 2   japan	Japanese: on Unix "euc-jp", on MS-Windows cp932
@@ -319,6 +455,8 @@ u   ucs-4be	same as ucs-4 (big endian)
 For the UCS codes the byte order matters.  This is tricky, use UTF-8 whenever
 you can.  The default is to use big-endian (most significant byte comes
 first):
+UCS°´Ò»¶¨µÄ¹æÔò±àÂë£¬¸üÁé»îµÄ£¬ÄÜÊ¹ÓÃUTF-8µÄµØ·½¾¡Á¿Ê¹ÓÃUTF-8£¬ËüÄ¬ÈÏÊ¹ÓÃbig-endian
+(ÓÅÏÈÊ¹ÓÃ×îÖØÒªµÄ)¡£
 	    name	bytes		char ~
 	    ucs-2	      11 22	    1122
 	    ucs-2le	      22 11	    1122
@@ -327,6 +465,7 @@ first):
 
 On MS-Windows systems you often want to use "ucs-2le", because it uses little
 endian UCS-2.
+ÔÚMS-WindowsÏµÍ³ÉÏÄãĞèÒªÊ¹ÓÃ£¬ËüÖ»Ê¹ÓÃÁËÒ»µãendian UCS-2¡£
 
 There are a few encodings which are similar, but exactly the same.  Vim treats
 them as if they were different encodings, so that conversion will be done when
@@ -335,12 +474,15 @@ conversion is not possible:
 
 	cp932, shift-jis, sjis
 	cp936, euc-cn
+ÓĞÒ»Ğ©±àÂë¿´ÆğÀ´ÏàËÆ£¬Êµ¼ÊÉÏËüÃÇÊÇÏàÍ¬µÄ¡£Vim°ÑËüÃÇµ±²»Í¬µÄ±àÂëÀ´´¦Àí£¬±ØÒªÊ±
+»¹»á·¢Éú×ª»¯£¬µ±×ª»¯²»±ØÒª»òÕßĞèÒª±ÜÃâÊ±£¬Äã¿ÉÒÔÊ¹ÓÃÏà½üµÄ±àÂëÃû¡£
 
 							*encoding-table*
 Normally 'encoding' is equal to your current locale and 'termencoding' is
 empty.  This means that your keyboard and display work with characters encoded
 in your current locale, and Vim uses the same characters internally.
-
+Ò»°ãÇé¿öÏÂ£¬¡®encoding¡¯ºÍµ±Ç°µÄlocaleÏàÍ¬£¬¡®termencoding¡¯Îª¿Õ£¬ÕâÒâÎ¶×Å
+¼üÅÌºÍÏÔÊ¾·½Ê½ÒÔµ±Ç°locale±àÂë×Ö·û£¬VimÄÚ²¿Ò²Ê¹ÓÃÏàÍ¬µÄ×Ö·û¡£
 You can make Vim use characters in a different encoding by setting the
 'encoding' option to a different value.  Since the keyboard and display still
 use the current locale, conversion needs to be done.  The 'termencoding' then
@@ -348,13 +490,19 @@ takes over the value of the current locale, so Vim converts between 'encoding'
 and 'termencoding'.  Example: >
 	:let &termencoding = &encoding
 	:set encoding=utf-8
-
+Äã¿ÉÒÔÍ¨¹ıÉèÖÃ¡®encodng¡¯ÒÔ²»Í¬µÄÖµÀ´Ê¹vimÊ¹ÓÃÁíÒ»ÖÖ±àÂëµÄ×Ö·û£¬µ«ÊÇ¼üÅÌºÍÏÔÊ¾·½Ê½
+ÈÔÓÃµ±Ç°µÄlocale£¬Õâ¾ÍĞèÒª×ª»¯¡£È»ºó¡®termencoding¡¯Ê¹ÓÃµ±Ç°localeÖµ£¬VimÔÚ¡®encoding¡¯
+ºÍ¡®termencoding¡¯Ö®¼ä×ª»¯¡£ÀıÈç£º
+        :let &termencoding = &encoding
+        :set encoding=utf-8
 However, not all combinations of values are possible.  The table below tells
 you how each of the nine combinations works.  This is further restricted by
 not all conversions being possible, iconv() being present, etc.  Since this
 depends on the system used, no detailed list can be given.
-
+¾¡¹ÜÈç´Ë£¬²¢²»ÊÇËùÓĞ×éºÏ¶¼¿ÉÒÔ×ª»¯¡£ÏÂÃæÕâ¸ö±í¸æËßÄã9¸ö×éºÏÈçºÎ×ª»¯£¬¸üÑÏ¸ñµÄ£¬
+ÏÖÔÚµÄiconv()±ãËùÓĞ×éºÏ×ª»¯£¬¶øÇÒ£¬ËüÈ¡¾öÓÚÄãµÄÏµÍ³£¬ÕâÀï²»ÄÜ¸ø³ö¾ßÌåµÄĞÅÏ¢¡£
 ('tenc' is the short name for 'termencoding' and 'enc' short for 'encoding')
+(¡®tenc¡¯ÊÇ¡®termencoding¡¯µÄ¼òĞ´£¬¡®enc¡¯ÊÇ¡®encoding¡¯µÄ¼òĞ´)
 
 'tenc'	    'enc'	remark ~
 
@@ -362,27 +510,42 @@ depends on the system used, no detailed list can be given.
 			'encoding' typing and displaying may be wrong for some
 			characters, Vim does NOT perform conversion (set
 			'encoding' to "utf-8" to get this).
+                        ¿ÉÒÔ×ª»¯£¬µ±¡®termencoding¡¯ºÍ¡®encoding¡¯²»Í¬Ê±£¬ÓĞĞ©×Ö·û
+                        µÄÊäÈëºÍÏÔÊ¾»áÓĞÎÊÌâ£¬Vim²»ÄÜ×ª»¯(°Ñ¡®encoding¡¯Éè³Éutf-8
+                        ¿ÉÒÔ½â¾ö)¡£
  8bit      2byte	MS-Windows: works for all codepages installed on your
 			system; you can only type 8bit characters;
 			Other systems: does NOT work.
+                        MS-Windows£ºÏµÍ³ÉÏ°²×°µÄËùÓĞcodepages¶¼¿ÉÒÔ×ª»¯£¬Í¬Ê±£¬Äã
+                        Ö»ÄÜÊäÈë8bit×Ö·û£¬ÔÚÆäËüµÄÏµÍ³ÉÏ¶¼²»ĞĞ¡£
  8bit	   Unicode	Works, but you can only type 8bit characters; in a
 			terminal you can only see 8bit characters; the GUI can
 			show all characters that the 'guifont' supports.
-
+                        ¿ÉÒÔ×ª»¯£¬µ«ÊÇÄãÖ»ÄÜÊäÈë8bit×Ö·û£¬ÔÚÖÕ¶ËÏÂÄãÖ»ÄÜ¿´µ½8bit×Ö·û£¬
+                        ÔÚGUIÏÂ¿ÉÒÔ¿´µ½¡®guifont¡¯Ö§³ÖµÄËùÓĞ×Ö·û¡£
  2byte	    8bit	Works, but typing non-ASCII characters might
 			be a problem.
+                        ¿ÉÒÔ×ª»¯£¬µ«ÊÇÊäÈënon-ASCII×Ö·û»áÓĞÎÊÌâ¡£
  2byte	   2byte	MS-Windows: works for all codepages installed on your
 			system; typing characters might be a problem when
 			locale is different from 'encoding'.
 			Other systems: Only works when 'termencoding' is equal
 			to 'encoding', you might as well leave it empty.
+                        MS-Windows£ºÖ§³ÖÏµÍ³°²×°µÄËùÓĞµÄcodepagesÖ®¼äµÄ×ª»¯£¬µ±locale
+                        ºÍ¡®encoding¡¯²»Í¬µÄÊ±ÊäÈë»áÓĞÎÊÌâ¡£
+                        ÔÚÆäËüÏµÍ³ÉÏ£¬µ±¡®termencoding¡¯ºÍ¡®encoding¡¯ÏàÍ¬»òÕßÎª¿Õ
+                        Ê±¿ÉÒÔ×ª»¯¡£          
  2byte	   Unicode	works, Vim will translate typed characters.
-
+                        ¿ÉÒÔ×ª»¯£¬Í¬Ê±Vim»¹»á×ª»¯ÊäÈëµÄ×Ö·û¡£
  Unicode    8bit	works (unusual)
+                        ¿ÉÒÔ×ª»¯(²»Æ½³£µÄ)
  Unicode    2byte	does NOT work
+                        ²»ÄÜ×ª»¯
  Unicode   Unicode	works very well (leaving 'termencoding' empty works
 			the same way, because all Unicode is handled
 			internally as UTF-8)
+                        ×ª»¯·Ç³£ºÃ(µ±¡®termencoding¡¯Îª¿ÕÊ±Ò²¿ÉÒÔ×ª»¯£¬ÒòÎªUnicodeÄÚ²¿
+                        Ê¹ÓÃUTF-8)
 
 CONVERSION						*charset-conversion*
 
@@ -398,12 +561,24 @@ Vim will automatically convert from one to another encoding in several places:
 - When reading or writing a |viminfo| file.
 Most of these require the |+iconv| feature.  Conversion for reading and
 writing files may also be specified with the 'charconvert' option.
-
+ÔÚÓĞĞ©µØ·½£¬Vim¿ÉÒÔ×Ô¶¯°ÑÒ»ÖÖ±àÂë×ª»¯³ÉÁíÒ»ÖÖ±àÂë£º
+-¶ÁÎÄ¼şºÍ¡®fileencoding¡¯ºÍ¡®encoding¡¯²»Í¬Ê±
+-Ğ´ÎÄ¼şºÍ¡®fileencoding¡¯ºÍ¡®encoding¡¯²»Í¬Ê±
+-ÏÔÊ¾×Ö·ûºÍ¡®termencoding¡¯ºÍ¡®encoding¡¯²»Í¬Ê±
+-¶ÁÈ¡ÊäÈëºÍ¡®termencoding¡¯ºÍ¡®encoding¡¯²»Í¬Ê±
+-ÏÔÊ¾ĞÅÏ¢ºÍLC_MESSAGEÊ¹ÓÃµÄ±àÂëºÍ¡®encoding¡¯²»Í¬Ê±
+-Vim½Å±¾|:scriptencoding|ºÍ¡®encoding¡¯²»Í¬Ê±
+-¶ÁĞ´Ò»¸ö|viminfo|ÎÄ¼şÊ±
+ÒÔÉÏºÜ¶à¶¼ĞèÒª|+iconv|ÌØĞÔ£¬¶ÁĞ´µÄ×ª»¯Ò²Ğí»¹ĞèÒªÌØ±ğÖ¸¶¨¡®chaconvert¡¯¡£
 Useful utilities for converting the charset:
     All:	    iconv
 	GNU iconv can convert most encodings.  Unicode is used as the
 	intermediate encoding, which allows conversion from and to all other
 	encodings.  See http://www.gnu.org/directory/libiconv.html.
+×ª»¯×Ö·ûºÍÒ»Ğ©ÓĞÓÃµÄ¹¤¾ß
+    All:            iconv
+       GNU iconv¿ÉÒÔ×ª»¯ºÜ¶à±àÂë£¬Unicode×÷ÎªÖĞ¼ä±àÂë£¬Ëü¿ÉÒÔ×ª»¯³ÉÆäËüËùÓĞµÄ
+       ±àÂë¡£¾ßÌåÇë¿´http://www.gnu.org/directory/libiconv.html
 
     Japanese:	    nkf
 	Nkf is "Network Kanji code conversion Filter".  One of the most unique
@@ -414,24 +589,42 @@ Useful utilities for converting the charset:
 	    :%!nkf -e
 	Nkf can be found at:
 	http://www.sfc.wide.ad.jp/~max/FreeBSD/ports/distfiles/nkf-1.62.tar.gz
+        Japanese:       nkf
+        NkfÊÇ¡°Network Kanji code conversion Filter¡±µÄËõĞ´£¬nkf×îÌØ±ğµÄµØ·½ÊÇËü¿ÉÒÔ
+        ²Â²âÊäÈëµÄKanjiµÄ±àÂë¡£ËùÒÔ£¬Äã²»±ØÖªµÀÊäÈëÎÄ¼şµÄ|charset|ÊÇÊ²Ã´¡£Òª´ÓISO-2202-JP
+        »òShift_JIS×ª»¯³ÉEUC-JP£¬ÔÚVimÀïÊäÈëÒÔÏÂÃüÁî£º
+            :%!nkf -e 
+        Nkf¿ÉÒÔÔÚÏÂÃæµØÖ·ÕÒµ½:
+        http://www.sfc.wide.ad.jp/~max/FreeBSD/ports/distfiles/nkf-1.62.tar.gz
 
     Chinese:	    hc
 	Hc is "Hanzi Converter".  Hc convert a GB file to a Big5 file, or Big5
 	file to GB file.  Hc can be found at:
 	ftp://ftp.cuhk.hk/pub/chinese/ifcss/software/unix/convert/hc-30.tar.gz
-
+    Chinese:        hc
+        HcÊÇ¡°Hanzi Converter¡±µÄ¼òĞ´£¬Hc°ÑÒ»¸öGBÎÄ¼ş×ª»¯³ÉBig5ÎÄ¼ş£¬»òÕß°ÑÒ»¸ö
+        Big5ÎÄ¼ş×ª»¯³ÉGBÎÄ¼ş£¬¿ÉÒÔÔÚÒÔÏÂµØÖ·ÕÒµ½:
+        ftp://ftp.cuhk.hk/pub/chinese/ifcss/software/unix/convert/hc-30.tar.gz
     Korean:	    hmconv
 	Hmconv is Korean code conversion utility especially for E-mail. It can
 	convert between EUC-KR and ISO-2022-KR.  Hmconv can be found at:
 	ftp://ftp.kaist.ac.kr/pub/hangul/code/hmconv/hmconv1.0pl3
-
+    Korean:         hmconv
+        HmconvÊÇÒ»Ì×E-mailÎÄ×Ö×ª»¯µÄ¹¤¾ß£¬Ëü¿ÉÒÔÔÚEUC-KRºÍISO-2202-KRÖ®¼ä×ª»¯¡£
+        Hmconv¿ÉÒÔÔÚÒÔÏÂµØÖ·ÕÒµ½:
+        ftp://ftp.kaist.ac.kr/pub/hangul/code/hmconv/hmconv1.0pl3
     Multilingual:   lv
 	Lv is a Powerful Multilingual File Viewer.  And it can be worked as
 	|charset| converter.  Supported |charset|: ISO-2022-CN, ISO-2022-JP,
 	ISO-2022-KR, EUC-CN, EUC-JP, EUC-KR, EUC-TW, UTF-7, UTF-8, ISO-8859
 	series, Shift_JIS, Big5 and HZ. Lv can be found at:
 	http://www.ff.iij4u.or.jp/~nrt/freeware/lv4493.tar.gz
-
+    Multilingual:   lv
+        LvÊÇÒ»¸öÇ¿´óµÄ¶àÓïÑÔÎÄ¼ş²é¿´Æ÷£¬Ëü»¹¿ÉÒÔ×÷Îª|charset|×ª»¯Æ÷£¬Ö§³ÖµÄ
+        |charset|ÓĞ:ISO-2202-CN,ISO-2202-JP,ISO-2202-KR,EUC-CN,EUC-JP,EUC-KR,
+        EUC-TW,UTF-7,UTF-8,ISO-8859ÏµÁĞ£¬Shift_JIS,Big5ºÍHZ.Lv¿ÉÒÔÔÚÒÔÏÂµØÖ·
+        ÕÒµ½:
+        http://www.ff.iij4u.or.jp/~nrt/freeware/lv4493.tar.gz
 ==============================================================================
 4. Using a terminal					*mbyte-terminal*
 
@@ -442,6 +635,10 @@ is less flexible.
 For example, you can run Vim in a xterm with added multi-byte support and/or
 |XIM|.  Examples are kterm (Kanji term) and hanterm (for Korean), Eterm
 (Enlightened terminal) and rxvt.
+GUIÈ«ÃæÖ§³Ö¶àÍ»³ö×Ö½Ú×Ö·û£¬Èç¹ûÖÕ¶ËÖ§³ÖVimÊ¹ÓÃµÄ±àÂë£¬ÖÕ¶ËÒ²¿ÉÒÔ£¬µ«ÊÇËüÁé»îĞÔ
+²»¸ß¡£
+¾Ù¸öÀı×Ó£¬Äã¿ÉÒÔÔÚÖ§³Ö¶à×Ö½Ú»òÕß|XIM|µÄxtermÀïÊ¹ÓÃVim£¬Èç:kterm(Kanji term),
+hanterm(Korean),Eterm(Enlightened terminal)ºÍrxvt¡£
 
 If your terminal does not support the right encoding, you can set the
 'termencoding' option.  Vim will then convert the typed characters from
@@ -452,41 +649,53 @@ characters.  This may mess up the display.  If you use a terminal that
 supports Unicode, such as the xterm mentioned below, it should work just fine,
 since nearly every character set can be converted to Unicode without loss of
 information.
-
+Èç¹ûÄãµÄÖÕ¶Ë²»Ö§³ÖÕıÈ·µÄ±àÂë£¬¿ÉÒÔÍ¨¹ıÉèÖÃ¡®termencoding¡¯À´½â¾ö¡£È»ºó£¬Vim
+°ÑÊäÈëµÄ×Ö·û´Ó¡®termencoding¡¯×ª»¯³É¡®encoding¡¯£¬°ÑÏÔÊ¾µÄ×Ö·û´Ó¡®encoding¡¯
+×ª»¯³É¡®termencoding¡¯¡£Èç¹ûÖÕ¶ËËùÖ§³ÖµÄ±àÂë²»°üº¬VimËùÊ¹ÓÃµÄ×Ö·û£¬Õâ»áµ¼ÖÂ
+×Ö·û¶ªÊ§£¬Ò²»áÒıÆğÏÔÊ¾»ìÂÒ¡£Èç¹ûÄãµÄÖÕ¶ËÖ§³ÖUnicode£¬ÈçÒÔÉÏÌáµ½µÄxterm£¬Õâ¾Í»á
+¹¤×÷Õı³££¬ÌØ±ğÊÇÏÖÔÚ´ÓÆäËü±àÂë×ª»¯³ÉUnicodeÊ±²»»á¶ªÊ§ĞÅÏ¢¡£
 
 UTF-8 IN XFREE86 XTERM					*UTF8-xterm*
 
 This is a short explanation of how to use UTF-8 character encoding in the
 xterm that comes with XFree86 by Thomas Dickey (text by Markus Kuhn).
-
+ÏÂÃæÊÇÒ»¸ö¼ò¶ÌµÄÔõÑùÔÚxtermÊ¹ÓÃUTF-8µÄËµÃ÷£¬ËüÀ´×ÔÓÚXFree86ÍÅ¶ÓµÄThomas Dickey
+(ÎÄ±¾ÎªMarkus KuhnËù×÷)¡£
 Get the latest xterm version which has now UTF-8 support:
 
 	http://www.clark.net/pub/dickey/xterm/xterm.tar.gz
-
+´ÓÒÔÏÂµØÖ·»ñµÃ×îĞÂµÄÖ§³ÖUTF-8µÄxterm:
+        http://www.clark.net/pub/dickey/xterm/xterm.tar.gz
 Compile it with "./configure --enable-wide-chars ; make"
-
+Í¬Ê±´øÒÔÏÂ²ÎÊı±àÒë¡°./configure --enable-wide-chars;make¡±
 Also get the ISO 10646-1 version of various fonts, which is available on
 
 	http://www.cl.cam.ac.uk/~mgk25/download/ucs-fonts.tar.gz
 
 and install the font as described in the README file.
-
+Í¬Ê±´ÓÒÔÏÂµØÖ·»ñµÃISO 10646-1ËùÖ§³ÖµÄ¶àÖÖ×ÖÌå:
+       http://www.cl.cam.ac.uk/~mgk25/download/ucs-fonts.tar.gz
 Now start xterm with >
-
+ÏÖÔÚ£¬ÓÃÒÔÏÂÃüÁîÆô¶¯xterm
   xterm -u8 -fn -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
 or, for bigger character: >
+ÒªÊ¹ÓÃ´ó×ÖÌå£¬ÇëÓÃÒÔÏÂÃüÁî:
   xterm -u8 -fn -misc-fixed-medium-r-normal--15-140-75-75-c-90-iso10646-1
 
 and you will have a working UTF-8 terminal emulator. Try both >
 
    cat utf-8-demo.txt
    vim utf-8-demo.txt
-
+ÏÖÔÚ£¬ÄãÓĞÒ»¸öÖ§³ÖUTF-8µÄÄ£ÄâÖÕ¶Ë£¬ÓÃÒÔÏÂÁ½ÖÖ·½·¨²âÊÔ>
+   cat utf-8-demo.txt
+   vim utf-8-demo.txt
 with the demo text that comes with ucs-fonts.tar.gz in order to see
 whether there are any problems with UTF-8 in your xterm.
 
 For Vim you may need to set 'encoding' to "utf-8".
 
+Ê¾ÀıÎÄ¼şÀ´×ÔÓÚucs-fonts.tar.gz£¬ËüµÄÄ¿µÄÊÇ²âÊÔÄãµÄxtermÊ¹ÓÃUTF-8ÊÇ·ñÓĞÎÊÌâ¡£
+Vim»¹ĞèÔÚÉèÖÃ¡®encoding¡¯Îª¡°utf-8¡±¡£
 ==============================================================================
 5.  Fonts on X11					*mbyte-fonts-X11*
 
@@ -497,13 +706,19 @@ First of all, Vim only accepts fixed-width fonts for displaying text.  You
 cannot use proportionally spaced fonts.  This excludes many of the available
 (and nicer looking) fonts.  However, for menus and tooltips any font can be
 used.
-
+²»ĞÒµÄÊÇ£¬ÔÚX11ÏÂÊ¹ÓÃ×ÖÌåÊÇ·Ç³£¸´ÔÓµÄ¡£µ¥×Ö½Ú×ÖÌåµÄÃû³ÆÊÇÒ»¸ö³¤×Ö·û´®£¬¶ø¶à×Ö½Ú
+×ÖÌåĞèÒª¶à¸ö¡£
+Ê×ÏÈ£¬VimÏÔÊ¾ÎÄ±¾Ö»ÄÜÊ¹ÓÃ¹Ì¶¨¿í¶ÈµÄ×ÖÌå£¬Äã²»ÄÜÊ¹ÓÃÏà³Æ¿Õ¼äµÄ×ÖÌå£¬°üÀ¨Ğí¶à¿ÉÓÃµÄ
+×ÖÌå(Ò²Ğí»¹ºÜºÃ¿´)¡£¾¡¹ÜÈç´Ë£¬²Ëµ¥ºÍ¹¤¾ßÀ¸¿ÉÒÔÊ¹ÓÃÈÎºÎ×ÖÌå¡£
 Note that Display and Input are independent.  It is possible to see your
 language even though you have no input method for it.
 
 You should get a default font for menus and tooltips that works, but it might
 be ugly.  Read the following to find out how to select a better font.
-
+×¢Òâ£¬ÏÔÊ¾ºÍÊäÈëÊÇ¶ÀÁ¢µÄ£¬¾ÍËãÃ»ÓĞÊäÈëÄãËùÊ¹ÓÃµÄÓïÑÔµÄÊäÈë·¨£¬ÄãÒ²¿ÉÒÔ¿´µ½ÄãËùÊ¹ÓÃµÄ
+ÓïÑÔ¡£
+Äã¿ÉÒÔÊ¹ÓÃÊ¹ÓÃÄ¬ÈÏµÄ×ÖÌåÀ´ÉèÖÃ²Ëµ¥ºÍ¹¤¾ßÀ¸£¬µ«¿ÉÄÜ·Ç³£³óÂª£¬ÔÄ¶ÁÒÔÏÂÄÚÈİ£¬Äã¿ÉÒÔÑ§µ½ÔõÑù
+Ñ¡ÔñÒ»¸ö½ÏºÃµÄ×ÖÌå¡£
 
 X LOGICAL FONT DESCRIPTION (XLFD)
 							*XLFD*
@@ -511,7 +726,8 @@ XLFD is the X font name and contains the information about the font size,
 charset, etc.  The name is in this format:
 
 FOUNDRY-FAMILY-WEIGHT-SLANT-WIDTH-STYLE-PIXEL-POINT-X-Y-SPACE-AVE-CR-CE
-
+XLFDÊÇXËùÊ¹ÓÃµÄ×ÖÌåµÄÃû³Æ£¬Ëü°üº¬×ÖÌå´óĞ¡£¬±àÂëµÈĞÅÏ¢¡£¸ñÊ½ÈçÏÂ:
+FOUNDRY-FAMILY-WEIGHT-SLANT-WIDTH-STYLE-PIXEL-POINT-X-Y-SPACE-AVE-CR-CE
 Each field means:
 
 - FOUNDRY:  FOUNDRY field.  The company that created the font.
@@ -519,6 +735,10 @@ Each field means:
 	    times, etc)
 - WEIGHT:   WEIGHT_NAME field.  How thick the letters are.  (light, medium,
 	    bold, etc)
+Ã¿¸ö×Ö¶ÎµÄÒâË¼ÊÇ:
+-FOUNDRY£ºFOUNDRY×Ö¶Î£¬±àĞ´×ÖÌåµÄ¹«Ë¾Ãû³Æ¡£
+-FAMILY£ºFAAMILY_NAME×Ö¶Î£¬»ù±¾µÄ×ÖÌå×åÃû³Æ(helvetica,gothic,timesµÈµÈ)
+-WEIGHT£ºWEIGHT_NAME×Ö¶Î£¬×ÖÄ¸µÄ´ÖÏ¸¡£(light,medium,boldµÈµÈ)¡£
 - SLANT:    SLANT field.
 		r:  Roman (no slant)
 		i:  Italic
@@ -527,28 +747,43 @@ Each field means:
 		ro: Reverse Oblique
 		ot: Other
 		number:	Scaled font
+-SLANT£ºSLANT×Ö¶Î
+                
 - WIDTH:    SETWIDTH_NAME field.  Width of characters.  (normal, condensed,
 	    narrow, double wide)
 - STYLE:    ADD_STYLE_NAME field.  Extra info to describe font.  (Serif, Sans
 	    Serif, Informal, Decorated, etc)
 - PIXEL:    PIXEL_SIZE field.  Height, in pixels, of characters.
+-WIDTH:     SETWIDTH_NAME×Ö¶Î£¬×Ö·û¿í¶È(normal,condensed,narrow,double wide)
+-STYLE£º    ADD_STYLE_NAME×Ö¶Î£¬×ÖÌåµÄ¶îÍâĞÅÏ¢¡£(Serif,Sans-Serif,Informal,DecoratedµÈµÈ)
+-PIXEL£º    PIXEL_SIZE×Ö¶Î£¬×ÖÌå¸ß¶È£¬ÒÔpixels¼ÆËã¡£
 - POINT:    POINT_SIZE field.  Ten times height of characters in points.
 - X:	    RESOLUTION_X field.  X resolution (dots per inch).
 - Y:	    RESOLUTION_Y field.  Y resolution (dots per inch).
+-POINT£º    POINT_SIZE×Ö¶Î£¬10±¶×ÖÌåµÄ¸ß¶È£¬ÒÔpoints¼ÆËã¡£
+-X:         RESOLUTION_X×Ö¶Î£¬XµÄÎ»Êı(Ã¿Ó¢´ç¶àÉÙµã)
+-Y£º        RESOLUTION_Y×Ö¶Î£¬YµÄÎ»Êı(Ã¿Ó¢´ç¶àÉÙµã)
 - SPACE:    SPACING field.
 		p:  Proportional
 		m:  Monospaced
 		c:  CharCell
 - AVE:	    AVERAGE_WIDTH field.  Ten times average width in pixels.
 - CR:	    CHARSET_REGISTRY field.  The name of the charset group.
+-SPACE£º    SPACING×Ö¶Î
+                p£º±ÈÀı
+                m£ºµ¥¿Õ¸ñ
+                c£ºcharcell
+-AVE£º      AVERAGE_WIDTH×Ö¶Î£¬10±¶×ÖÌåµÄ¿í¶È£¬ÒÔpixels¼ÆËã
+-CR£º       CHARSET_REGISTRY×Ö¶Î¡£±àÂë×éµÄÃû³Æ
 - CE:	    CHARSET_ENCODING field.  The rest of the charset name.  For some
 	    charsets, such as JIS X 0208, if this field is 0, code points has
 	    the same value as GL, and GR if 1.
-
+-CE£º       CHARSET_ENCODING×Ö¶Î£¬±àÂëµÄÆäËüÃû³Æ¡£¶ÔÒ»Ğ©±àÂëÀ´½²£¬ÈçJIS X 0208£¬Èç¹ûÕâ
+            ¸ö×Ö¶ÎÎª0,ÄÇÃ´code pointsºÍGLÓĞÏàÍ¬µÄÖµ£¬Îª1µÄ»°£¬ºÍGRÓĞÏàÍ¬µÄÖµ¡£
 For example, in case of a 14 dots font corresponding to JIS X 0208, it is
 written like:
     -misc-fixed-medium-r-normal--16-110-100-100-c-160-jisx0208.1990-0
-
+¾Ù¸öÀı×Ó£¬ÉèÖÃ´óĞ¡Îª14,¶ÔÓ¦JIS X 0208±àÂë£¬¿ÉÒÔĞ´³ÉÒÔÏÂ¸ñÊ½
 
 X FONTSET
 						*fontset* *xfontset*
@@ -561,11 +796,16 @@ Which fonts are required in a fontset depends on the current locale.  X
 windows maintains a table of which groups of characters are required for a
 locale.  You have to specify all the fonts that a locale requires in the
 'guifontset' option.
+single-byte×Ö·ûºÍÒ»¸ö×ÖÓĞ¹Ø£¬¶Ô¶à×Ö½ÚÀ´½²£¬×ÖÄ¸µÄ×éºÏ¾­³£ÓÃµ½£¬ÕâÒâÎ¶×ÅÒ»×é
+×ÖÊ¹ÓÃÁËÒ»ÖÖ×ÖÌåºÍÁíÒ»ÖÖ×ÖÌå×éµÄ×ÖÌå(Ò²ĞíÊÇË«¿í¶È)£¬×ÖÌåµÄ¼¯ºÏ¾Í½Ğ×öfontset¡£
+fontsetÀïµÄ×ÖÌåÒÀÀµÓÚÄãÏµÍ³µÄlocale£¬X windowsÎ¬»¤×ÅÕâ¸ölocaleËùĞèÒªµÄ×ÖÌå×é
+µÄ±í£¬ÄãĞèÒªÔÚguifontsetÀïÖ¸¶¨localeËùĞèÒªµÄÈ«²¿×ÖÌå¡£
 
 NOTE: The fontset always uses the current locale, even though 'encoding' may
 be set to use a different charset.  In that situation you might want to use
 'guifont' and 'guifontwide' instead of 'guifontset'.
-
+×¢Òâ£ºfontset¾­³£Ê¹ÓÃµ±Ç°µÄlocale£¬¼´Ê¹¡®encoding¡¯ÒÑÉèÖÃ³ÉÁíÒ»ÖÖ±àÂë£¬ÔÚÄÇÖÖ
+Çé¿öÏÂ£¬ÄãÒªÉèÖÃ¡®guifont¡¯ºÍ¡®guifontwide¡¯¶ø²»ÊÇ¡®guifontset¡¯¡£
 Example:
     |charset| language		    "groups of characters" ~
     GB2312    Chinese (simplified)  ISO-8859-1 and GB 2312
@@ -573,6 +813,7 @@ Example:
     CNS-11643 Chinese (traditional) ISO-8859-1, CNS 11643-1 and CNS 11643-2
     EUC-JP    Japanese		    JIS X 0201 and JIS X 0208
     EUC-KR    Korean		    ISO-8859-1 and KS C 5601 (KS X 1001)
+ÀıÈç£º
 
 You can search for fonts using the xlsfonts command.  For example, when you're
 searching for a font for KS C 5601: >
@@ -580,7 +821,10 @@ searching for a font for KS C 5601: >
 
 This is complicated and confusing.  You might want to consult the X-Windows
 documentation if there is something you don't understand.
-
+Äã¿ÉÒÔÓÃxlsfontsÀ´²éÕÒ×ÖÌå£¬ÀıÈç£¬ÄãĞèÒªÕÒKS C 5601µÄÒ»ÖÖ×ÖÌå:>
+    xlsfonts | grep ksc5601
+Õâ¸ö±È½Ï¸´ÔÓ£¬Ò²ÁîÈËÃÔ»ó£¬Ò²ĞíÄãĞèÒªÔÄ¶ÁX-WindowsµÄÎÄµµ£¬Ëü¿ÉÒÔ°ïÖúÄã
+Àí½âÄã²»¶®µÄµØ·½¡£
 						*base_font_name_list*
 When you have found the names of the fonts you want to use, you need to set
 the 'guifontset' option.  You specify the list by concatenating the font names
@@ -592,24 +836,32 @@ the charsets, like: >
 
  :set guifontset=-misc-fixed-medium-r-normal--14-130-75-75-c-140-jisx0208.1983-0,
 	\-misc-fixed-medium-r-normal--14-130-75-75-c-70-jisx0201.1976-0
-
+µ±ÄãÕÒµ½ÄãËùĞèÒªµÄ×ÖÌåÒÔºó£¬Äã¾Í¿ÉÒÔÍ¨¹ıÉèÖÃ¡®guifontset¡¯À´ÉèÖÃ×ÖÌå¡£ÒªÊ¹ÓÃÒ»ÏµÁĞµÄ
+×ÖÌå£¬Äã¿ÉÒÔÓÃ¡°£¬¡±°ÑËüÃÇ¸ô¿ª£¬ÀıÈç:>
+ :set 
 Alternatively, you can supply a base font name list that omits the charset
 name, letting X-Windows select font characters required for the locale.  For
 example: >
 
  :set guifontset=-misc-fixed-medium-r-normal--14-130-75-75-c-140,
 	\-misc-fixed-medium-r-normal--14-130-75-75-c-70
-
+¿ÉÒÔÑ¡ÔñµÄÊÇ£¬Äã¿ÉÒÔÉèÖÃÒ»¸ö»ù±¾µÄÊ¡ÂÔ±àÂëÃûµÄ×ÖÌåÁĞ±í£¬ÈÃX-Windows´ÓlocaleÑ¡Ôñ
+ËùĞèÒªµÄ×ÖÌå£¬ÀıÈç£º>
+ :set 
 Alternatively, you can supply a single base font name that allows X-Windows to
 select from all available fonts.  For example: >
 
  :set guifontset=-misc-fixed-medium-r-normal--14-*
-
+ÄãÒ²¿ÉÒÔÌá¹©Ò»¸ö»ù±¾µÄ×ÖÌåÃûÈÃX-WindowsÑ¡ÔñÏµÍ³¿ÉÓÃµÄËùÓĞ×ÖÌå£¬ÀıÈç£º>
+ :set
 Alternatively, you can specify alias names.  See the fonts.alias file in the
 fonts directory (e.g., /usr/X11R6/lib/X11/fonts/).  For example: >
 
  :set guifontset=k14,r14
 <
+Í¬Ê±£¬ÄãÒ²¿ÉÒÔÖ¸¶¨×ÖÌå±ğÃû£¬Çë²Î¿¼×ÖÌåÄ¿Â¼ÏÂµÄfonts.aliasÎÄ¼ş(ÀıÈç,/usr/X11R6/lib/X11/fonts).
+ÀıÈç:>
+ :set 
 							*E253*
 Note that in East Asian fonts, the standard character cell is square.  When
 mixing a Latin font and an East Asian font, the East Asian font width should
@@ -622,7 +874,13 @@ highlighting: >
 If you use a wrong "font" argument you will get an error message.
 Also make sure that you set 'guifontset' before setting fonts for highlight
 groups.
-
+ÔÚ¶«·½×ÖÌåÖĞ£¬Õı¹æµÄ×Ö·ûµ¥ÔªÊÇÕı·½ĞÎ£¬µ±Äã»ìºÍÒ»¸öLatin×ÖºÍÒ»¸ö¶«ÑÇ×ÖµÄÊ±ºò£¬¶«ÑÇ×Ö
+µÄ¿í¶ÈÓ¦¸ÃÊÇLatin×ÖµÄÁ½±¶¡£
+Èç¹û¡®guifontset¡¯²»Îª¿Õ£¬|:highlight|ÃüÁîµÄ¡°font¡±²ÎÊıÒ²¿ÉÒÔ¿´³ÉÊÇfontsetµÄ½âÊÍÆ÷¡£
+ÀıÈç£¬Äã¿ÉÒÔÉèÖÃ¸ßÁÁÏÔÊ¾:>
+        :hi 
+Èç¹ûÄãÊ¹ÓÃÁËÒ»¸ö´íÎóµÄ¡°font¡±²ÎÊı£¬Äã»áÊÕµ½´íÎóĞÅÏ¢¡£Í¬ÑùÈ·¶¨ÄãÊÇÔÚÉèÖÃ
+¡®guifontset¡¯Ö®Ç°ÉèÖÃ¸ßÁÁÏÔÊ¾¡£
 
 USING RESOURCE FILES
 
@@ -634,30 +892,40 @@ For Motif and Athena insert these three lines in your $HOME/.Xdefaults file:
 	Vim.font: |base_font_name_list|
 	Vim*fontSet: |base_font_name_list|
 	Vim*fontList: your_language_font
+²»ÉèÖÃ¡®guifontset¡¯£¬Äã¿ÉÒÔÉèÖÃX11 resources£¬Vim»á´ÓËüÃÇÖĞÈ¡Öµ¡£Õâ½ö½ö¶Ô
+ÁË½âX resourceµÄÈËÓĞÓÃ¡£
+Èç¹ûÄãÊ¹ÓÃMotifºÍAthena£¬°ÑÒÔÏÂÈıĞĞ²åÈë$HOME/.XdefaultsÎÄ¼ş:
 
+    
 Note: Vim.font is for text area.
       Vim*fontSet is for menu.
       Vim*fontList is for menu (for Motif GUI)
-
+×¢Òâ£ºVim.fontÉèÖÃÎÄ±¾
+      Vim*fontSetÉèÖÃ²Ëµ¥
+      Vim*fontListÉèÖÃMoitf GUIµÄ²Ëµ¥
 For example, when you are using Japanese and a 14 dots font, >
 
 	Vim.font: -misc-fixed-medium-r-normal--14-*
 	Vim*fontSet: -misc-fixed-medium-r-normal--14-*
 	Vim*fontList: -misc-fixed-medium-r-normal--14-*
 <
+¾Ù¸öÀı×Ó£¬ÄãÊ¹ÓÃÈÕÓï£¬14ºÅ×ÖÌå
 or: >
 
 	Vim*font: k14,r14
 	Vim*fontSet: k14,r14
 	Vim*fontList: k14,r14
 <
+»òÕß
 To have them take effect immediately you will have to do >
 
 	xrdb -merge ~/.Xdefaults
 
 Otherwise you will have to stop and restart the X server before the changes
 take effect.
-
+ÒªÊ¹ËüÃÇÁ¢¼´ÉúĞ§£¬Äã¿ÉÒÔÕâÑù×ö
+        xrdb -merge ~/.Xdefaults
+²»È»£¬ÄãÒª¹Ø±ÕXÖ®ºóÖØĞÂÆô¶¯XÀ´Ê¹ËüÃÇÉúĞ§¡£
 
 The GTK+ version of GUI Vim does not use .Xdefaults, use ~/.gtkrc instead.
 The default mostly works OK.  But for the menus you might have to change
@@ -668,6 +936,8 @@ it.  Example: >
 		fontset="-*-*-medium-r-normal--14-*-*-*-c-*-*-*"
 	}
 	widget_class "*" style "default"
+GTK+°æµÄGUI Vim²»Ê¹ÓÃ.Xdefaults£¬ËüÊ¹ÓÃ~/.gtkrc£¬´ó¶àÊı¶¼¿ÉÒÔÕı³£¹¤×÷¡£Òª¸ü¸Ä²Ëµ¥
+×ÖÌå£¬Äã¿ÉÒÔÈçÏÂÉèÖÃ:>
 
 ==============================================================================
 6.  Fonts on MS-Windows				*mbyte-fonts-MSwin*
@@ -681,6 +951,10 @@ that works well you can use this command to see its name: >
 Then add a command to your |gvimrc| file to set 'guifont': >
 
 	:set guifont=courier_new:h12
+×î¼òµ¥µÄ·½·¨¾ÍÊÇÓÃ¶Ô»°¿òÀ´Ñ¡Ôñ×ÖÌå¡£Äã¿ÉÒÔÔÚ²Ëµ¥¡°Edit/Select Font...¡±ÖĞÕÒµ½¡£
+Ò»µ©ÄãÕÒµ½Ò»¸öºÃÓÃµÄ×ÖÌå£¬Äã¿ÉÒÔÊ¹ÓÃÒÔÏÂÃüÁîÀ´²é¿´ËüµÄÃû×Ö:>
+        :set guifont
+È»ºóÄã¿ÉÒÔÔÚ|gvimrc|ÖĞÌí¼ÓÒ»¸öÃüÁîÀ´ÉèÖÃ¡®guifont¡¯:>
 
 ==============================================================================
 7.  Input on X11				*mbyte-XIM*
@@ -991,7 +1265,7 @@ The length of the two items together must not exceed 200 bytes.
 
 It's possible to have more than one character in the first column.  This works
 like a dead key.  Example: >
-	'a	á
+                    'a     *
 Since Vim doesn't know if the next character after a quote is really an "a",
 it will wait for the next character.  To be able to insert a single quote,
 also add this line: >
@@ -1032,130 +1306,9 @@ and what the keymaps are to get those characters:
 
 glyph   encoding	   keymap ~
 Char   utf-8 cp1255  hebrew  hebrewp  name ~
-×    0x5d0  0xe0     t        a     'alef
-×‘    0x5d1  0xe1     c        b     bet
-×’    0x5d2  0xe2     d        g     gimel
-×“    0x5d3  0xe3     s        d     dalet
-×”    0x5d4  0xe4     v        h     he
-×•    0x5d5  0xe5     u        v     vav
-×–    0x5d6  0xe6     z        z     zayin
-×—    0x5d7  0xe7     j        j     het
-×˜    0x5d8  0xe8     y        T     tet
-×™    0x5d9  0xe9     h        y     yod
-×š    0x5da  0xea     l        K     kaf sofit
-×›    0x5db  0xeb     f        k     kaf
-×œ    0x5dc  0xec     k        l     lamed
-×    0x5dd  0xed     o        M     mem sofit
-×    0x5de  0xee     n        m     mem
-×Ÿ    0x5df  0xef     i        N     nun sofit
-×     0x5e0  0xf0     b        n     nun
-×¡    0x5e1  0xf1     x        s     samech
-×¢    0x5e2  0xf2     g        u     `ayin
-×£    0x5e3  0xf3     ;        P     pe sofit
-×¤    0x5e4  0xf4     p        p     pe
-×¥    0x5e5  0xf5     .        X     tsadi sofit
-×¦    0x5e6  0xf6     m        x     tsadi
-×§    0x5e7  0xf7     e        q     qof
-×¨    0x5e8  0xf8     r        r     resh
-×©    0x5e9  0xf9     a        w     shin
-×ª    0x5ea  0xfa     ,        t     tav
 
-Vowel marks and special punctuation:
-×”Ö°    0x5b0  0xc0     A:      A:   sheva
-×”Ö±    0x5b1  0xc1     HE      HE   hataf segol
-×”Ö²    0x5b2  0xc2     HA      HA   hataf patah
-×”Ö³    0x5b3  0xc3     HO      HO   hataf qamats
-×”Ö´    0x5b4  0xc4     I       I    hiriq
-×”Öµ    0x5b5  0xc5     AY      AY   tsere
-×”Ö¶    0x5b6  0xc6     E       E    segol
-×”Ö·    0x5b7  0xc7     AA      AA   patah
-×”Ö¸    0x5b8  0xc8     AO      AO   qamats
-×”Ö¹    0x5b9  0xc9     O       O    holam
-×”Ö»    0x5bb  0xcb     U       U    qubuts
-×›Ö¼    0x5bc  0xcc     D       D    dagesh
-×”Ö½    0x5bd  0xcd     ]T      ]T   meteg
-×”Ö¾   0x5be  0xce     ]Q      ]Q   maqaf
-×‘Ö¿    0x5bf  0xcf     ]R      ]R   rafe
-×‘×€   0x5c0  0xd0     ]p      ]p   paseq
-×©×    0x5c1  0xd1     SR      SR   shin-dot
-×©×‚    0x5c2  0xd2     SL      SL   sin-dot
-×ƒ    0x5c3  0xd3     ]P      ]P   sof-pasuq
-×°    0x5f0  0xd4     VV      VV   double-vav
-×±    0x5f1  0xd5     VY      VY   vav-yod
-×²    0x5f2  0xd6     YY      YY   yod-yod
+my mozilla can't show the content correctly!!!!!
 
-The following are only available in utf-8
-
-Cantillation marks:
-glyph
-Char utf-8 hebrew name
-×‘Ö‘    0x591   C:   etnahta
-×‘Ö’    0x592   Cs   segol
-×‘Ö“    0x593   CS   shalshelet
-×‘Ö”    0x594   Cz   zaqef qatan
-×‘Ö•    0x595   CZ   zaqef gadol
-×‘Ö–    0x596   Ct   tipeha
-×‘Ö—    0x597   Cr   revia
-×‘Ö˜    0x598   Cq   zarqa
-×‘Ö™    0x599   Cp   pashta
-×‘Öš    0x59a   C!   yetiv
-×‘Ö›    0x59b   Cv   tevir
-×‘Öœ    0x59c   Cg   geresh
-×‘Ö    0x59d   C*   geresh qadim
-×‘Ö    0x59e   CG   gershayim
-×‘ÖŸ    0x59f   CP   qarnei-parah
-×‘Öª    0x5aa   Cy   yerach-ben-yomo
-×‘Ö«    0x5ab   Co   ole
-×‘Ö¬    0x5ac   Ci   iluy
-×‘Ö­    0x5ad   Cd   dehi
-×‘Ö®    0x5ae   Cn   zinor
-×‘Ö¯    0x5af   CC   masora circle
-
-Combining forms:
-ï¬     0xfb20  X`   Alternative `ayin
-ï¬¡    0xfb21  X'   Alternative 'alef
-ï¬¢    0xfb22  X-d  Alternative dalet
-ï¬£    0xfb23  X-h  Alternative he
-ï¬¤    0xfb24  X-k  Alternative kaf
-ï¬¥    0xfb25  X-l  Alternative lamed
-ï¬¦    0xfb26  X-m  Alternative mem-sofit
-ï¬§    0xfb27  X-r  Alternative resh
-ï¬¨    0xfb28  X-t  Alternative tav
-ï¬©    0xfb29  X-+  Alternative plus
-ï¬ª    0xfb2a  XW   shin+shin-dot
-ï¬«    0xfb2b  Xw   shin+sin-dot
-ï¬¬    0xfb2c  X..W  shin+shin-dot+dagesh
-ï¬­    0xfb2d  X..w  shin+sin-dot+dagesh
-ï¬®    0xfb2e  XA   alef+patah
-ï¬¯    0xfb2f  XO   alef+qamats
-ï¬°    0xfb30  XI   alef+hiriq (mapiq)
-ï¬±    0xfb31  X.b  bet+dagesh
-ï¬²    0xfb32  X.g  gimel+dagesh
-ï¬³    0xfb33  X.d  dalet+dagesh
-ï¬´    0xfb34  X.h  he+dagesh
-ï¬µ    0xfb35  Xu  vav+dagesh
-ï¬¶    0xfb36  X.z  zayin+dagesh
-ï¬¸    0xfb38  X.T  tet+dagesh
-ï¬¹    0xfb39  X.y  yud+dagesh
-ï¬º    0xfb3a  X.K  kaf sofit+dagesh
-ï¬»    0xfb3b  X.k  kaf+dagesh
-ï¬¼    0xfb3c  X.l  lamed+dagesh
-ï¬¾    0xfb3e  X.m  mem+dagesh
-ï­€    0xfb40  X.n  nun+dagesh
-ï­    0xfb41  X.s  samech+dagesh
-ï­ƒ    0xfb43  X.P  pe sofit+dagesh
-ï­„    0xfb44  X.p  pe+dagesh
-ï­†    0xfb46  X.x  tsadi+dagesh
-ï­‡    0xfb47  X.q  qof+dagesh
-ï­ˆ    0xfb48  X.r  resh+dagesh
-ï­‰    0xfb49  X.w  shin+dagesh
-ï­Š    0xfb4a  X.t  tav+dagesh
-ï­‹    0xfb4b  Xo   vav+holam
-ï­Œ    0xfb4c  XRb  bet+rafe
-ï­    0xfb4d  XRk  kaf+rafe
-ï­    0xfb4e  XRp  pe+rafe
-ï­    0xfb4f  Xal  alef-lamed
-==============================================================================
 10. Using UTF-8				*mbyte-utf8* *UTF-8* *utf-8* *utf8*
 								*Unicode*
 The Unicode character set was designed to include all characters from other

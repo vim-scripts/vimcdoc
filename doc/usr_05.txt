@@ -6,8 +6,8 @@
 			Ñ¡ÏîÉèÖÃ
 
 
-Vim ¿ÉÒÔ°´ÄãµÄÐèÒª½øÐÐÉèÖÃ¡£±¾ÕÂ¸æËßÄãÔõÑùÊ¹ Vim ÓÃÄãÖ¸¶¨µÄÑ¡ÏîÆô¶¯£¬ÔõÑùÔö¼Ó²å¼þ
-ÒÔÔöÇ¿ Vim µÄ¹¦ÄÜ£»ÒÔ¼°ÔõÑù½øÐÐºê¶¨Òå¡£
+Vim ¿ÉÒÔ°´ÄãµÄÐèÒª½øÐÐÉèÖÃ¡£±¾ÕÂ¸æËßÄãÔõÑùÊ¹ Vim ÓÃÄãÖ¸¶¨µÄÑ¡ÏîÆô¶¯£¬ÔõÑùÔö¼Ó
+²å¼þÒÔÔöÇ¿ Vim µÄ¹¦ÄÜ£»ÒÔ¼°ÔõÑù½øÐÐºê¶¨Òå¡£
 
 |05.1|	vimrc ÎÄ¼þ
 |05.2|	vimrc Ê¾Àý½âÊÍ
@@ -22,7 +22,7 @@ Vim ¿ÉÒÔ°´ÄãµÄÐèÒª½øÐÐÉèÖÃ¡£±¾ÕÂ¸æËßÄãÔõÑùÊ¹ Vim ÓÃÄãÖ¸¶¨µÄÑ¡ÏîÆô¶¯£¬ÔõÑùÔö¼Ó²å¼
 	Ä¿Â¼£º|usr_toc.txt|
 
 =============================================================================
-*05.1*	vimrc ÎÄ¼þ
+*05.1*	vimrc ÎÄ¼þ					*vimrc-intro*
 
 ¿ÉÄÜÄãÒÑ¾­Ñá¾ëÁËÊäÈëÄÇÐ©¾­³£ÓÃµ½µÄÃüÁîÁË¡£ÒªÈÃ Vim ÓÃÄãÏ°¹ßµÄÉèÖÃÆô¶¯£¬Äã¿ÉÒÔ
 °ÑÕâÐ©ÉèÖÃÐ´µ½Ò»¸ö½Ð vimrc µÄÎÄ¼þÖÐ¡£Vim »áÔÚÆô¶¯µÄÊ±ºò¶ÁÈëÕâ¸öÎÄ¼þ¡£
@@ -33,8 +33,8 @@ Vim ¿ÉÒÔ°´ÄãµÄÐèÒª½øÐÐÉèÖÃ¡£±¾ÕÂ¸æËßÄãÔõÑùÊ¹ Vim ÓÃÄãÖ¸¶¨µÄÑ¡ÏîÆô¶¯£¬ÔõÑùÔö¼Ó²å¼
 
 ÃüÁîÁÐ³öµÄÎÄ¼þÁÐ±í¿ªÍ·µÄ¼¸¸öÖÐÓ¦¸ÃÓÐÒ»¸ö½Ð ".vimrc" »òÕß "_vimrc" µÄÎÄ¼þÔÚÄãµÄ
 home Ä¿Â¼ÖÐ¡£
-    Èç¹ûÄã»¹Ã»ÓÐ vimrc£¬Çë²Î¿¼ |vimrc| Ò»½Ú¿´¿´ÄãÓ¦¸ÃÔÚÊ²Ã´µØ·½´´½¨ vimrc ÎÄ¼þ¡£
-ÁíÍâ ":version" ÃüÁîÄÜ¸æËßÄã vim ÔÚÊ²Ã´µØ·½ÕÒ "ÓÃ»§µÄ vimrc ÎÄ¼þ"¡£
+    Èç¹ûÄã»¹Ã»ÓÐ vimrc ÎÄ¼þ£¬Çë²Î¿¼ |vimrc| Ò»½Ú¿´¿´ÄãÓ¦¸ÃÔÚÊ²Ã´µØ·½´´½¨ vimrc
+ÎÄ¼þ¡£ÁíÍâ ":version" ÃüÁîÄÜ¸æËßÄã vim ÔÚÊ²Ã´µØ·½ÕÒ "ÓÃ»§µÄ vimrc ÎÄ¼þ"¡£
 
 ¶ÔÓÚ Unix ÏµÍ³£¬¿Ï¶¨ÊÇÈçÏÂÎÄ¼þ£º
 >
@@ -45,20 +45,21 @@ home Ä¿Â¼ÖÐ¡£
 	$HOME/_vimrc
 	$VIM/_vimrc
 
-vimrc ÎÄ¼þ¿ÉÒÔ°üº¬ÈÎºÎÃ°ºÅÃüÁî¡£×î¼òµ¥µÄÊÇÉèÖÃÑ¡ÏîÃüÁî¡£ÀýÈç£¬Èç¹ûÄãÏë Vim Æô¶¯
-µÄÊ±ºòÊ¼ÖÕ¿ªÆô 'incsearch' Ñ¡Ïî£¬¿ÉÒÔÔÚÄãµÄ vimrc ÎÄ¼þÖÐ¼ÓÉÏ£º
+vimrc ÎÄ¼þ¿ÉÒÔ°üº¬ÈÎºÎÃ°ºÅÃüÁî¡£×î¼òµ¥µÄÊÇÉèÖÃÑ¡ÏîÃüÁî¡£ÀýÈç£¬Èç¹ûÄãÏë Vim Æô
+¶¯µÄÊ±ºòÊ¼ÖÕ¿ªÆô 'incsearch' Ñ¡Ïî£¬¿ÉÒÔÔÚÄãµÄ vimrc ÎÄ¼þÖÐ¼ÓÉÏ£º
 >
 	set incsearch
 
-ÒªÊ¹Õâ¸öÃüÁîÉúÐ§£¬ÄãÐèÒªÖØÆô¶¯ Vim¡£ºóÃæÎÒÃÇ»¹»áÑ§µ½ÈçºÎ²»ÍË³ö Vim ¾ÍÄÜÈÃËüÉúÐ§¡£
+ÒªÊ¹Õâ¸öÃüÁîÉúÐ§£¬ÄãÐèÒªÖØÆô¶¯ Vim¡£ºóÃæÎÒÃÇ»¹»áÑ§µ½ÈçºÎ²»ÍË³ö Vim ¾ÍÄÜÈÃËüÉú
+Ð§¡£
 
-ÕâÒ»ÕÂÖ»½âÊÍ×î»ù±¾µÄ¶«Î÷¡£ÒªÑ§Ï°¸ü¶à¹ØÓÚÐ´ Vim ½Å±¾µÄÖªÊ¶£¬Çë²Î¼û|usr_41.txt|¡£
+ÕâÒ»ÕÂÖ»½âÊÍ×î»ù±¾µÄ¶«Î÷¡£ÏëÁË½â¸ü¶à¹ØÓÚ Vim ½Å±¾µÄÖªÊ¶£¬Çë²Î¼û|usr_41.txt|¡£
 
 =============================================================================
-*05.2*	vimrc Ê¾Àý½âÊÍ
+*05.2*	vimrc Ê¾Àý½âÊÍ					*vimrc_example.vim*
 
-ÔÚµÚÒ»ÕÂÖÐ£¬ÎÒÃÇÔø¾­½éÉÜ¹ýÔõÑùÓÃ vimrc Ê¾ÀýÎÄ¼þ£¨°üÀ¨ÔÚ Vim ·¢²¼ÖÐ£©Ê¹ Vim ÒÔ·Ç
-vi ¼æÈÝÄ£Ê½Æô¶¯£¨²Î¼û|not-compatible|£©¡£Õâ¸öÎÄ¼þ¿ÉÒÔÔÚÕâÀïÕÒµ½£º
+ÔÚµÚÒ»ÕÂÖÐ£¬ÎÒÃÇÔø¾­½éÉÜ¹ýÔõÑùÓÃ vimrc Ê¾ÀýÎÄ¼þ£¨°üÀ¨ÔÚ Vim ·¢²¼ÖÐ£©Ê¹ Vim ÒÔ
+·Çvi ¼æÈÝÄ£Ê½Æô¶¯£¨²Î¼û|not-compatible|£©¡£Õâ¸öÎÄ¼þ¿ÉÒÔÔÚÕâÀïÕÒµ½£º
 
 	$VIMRUNTIME/vimrc_example.vim ~
 
@@ -68,7 +69,7 @@ vi ¼æÈÝÄ£Ê½Æô¶¯£¨²Î¼û|not-compatible|£©¡£Õâ¸öÎÄ¼þ¿ÉÒÔÔÚÕâÀïÕÒµ½£º
 
 	set nocompatible
 
-ÈçµÚÒ»ÕÂËùÊö£¬Õâ¸öÃüÁîÈËÎªµØ¸æËß Vim ¹¤×÷ÔÚ vi ÔöÇ¿Ä£Ê½£¬Òò´ËÓë Vi ²»ÍêÈ«¼æÈÝ¡£
+¾ÍÏñµÚÒ»ÕÂËùÊö£¬ÕâÐ©ÊÖ²á½âÊÍÁË Vim ¹¤×÷ÔÚ¸Ä½øµÄ·½Ê½ÏÂ£¬Òò´ËÓë Vi ²»ÍêÈ«¼æÈÝ¡£
 Òª¹Ø±Õ 'compatible' Ñ¡ÏîÉè£¬'nocompatible' ¿ÉÒÔÓÃÓÚÍê³ÉÕâ¸ö¹¦ÄÜ¡£
 
 >
@@ -154,7 +155,7 @@ Vim ¼ÓÁÁÉÏ´Î²éÕÒÄ£Ê½Æ¥ÅäµÄµØ·½¡£"if" ÃüÁîÔÚÉèÖÃÑ¡ÏîµÄÊ±ºò·Ç³£ÓÐÓÃ£¬ËüÊ¹ÉèÖÃ
 
 ÕâÆô¶¯Èý¸ö·Ç³£ÁéÇÉµÄ»úÖÆ£º
 1. ÎÄ¼þÀàÐÍÌ½²â
-    µ±Äã¿ªÊ¼±à¼­Ò»¸öÎÄ¼þµÄÊ±ºò£¬Vim »áÊÔÍ¼È·¶¨Õâ¸öÎÄ¼þµÄÀàÐÍ¡£µ±Äã±à¼­ "main.c"
+    µ±Äã¿ªÊ¼±à¼­Ò»¸öÎÄ¼þµÄÊ±ºò£¬Vim »áÊÔÍ¼È·¶¨Õâ¸öÎÄ¼þµÄÀàÐÍ¡£µ±±à¼­ "main.c"
     Ê±£¬Vim »á¸ù¾ÝÀ©Õ¹Ãû ".c" ÈÏÎªÕâÊÇÒ»¸ö C Ô´ÎÄ¼þ¡£µ±Äã±à¼­Ò»¸öÎÄ¼þÇ°ÃæÊÇ
     "#!/bin/sh" µÄÎÄ¼þÊ±£¬Vim »á°ÑËüÈÏ×÷ "sh" ÎÄ¼þ¡£ÎÄ¼þÀàÐÍÌ½²âÓÃÓÚÓï·¨¼ÓÁÁ
     ºÍÒÔÏÂÁíÁ½Ïî¡£Çë²Î¼û|filetypes|¡£
@@ -214,19 +215,19 @@ Vim ¼ÓÁÁÉÏ´Î²éÕÒÄ£Ê½Æ¥ÅäµÄµØ·½¡£"if" ÃüÁîÔÚÉèÖÃÑ¡ÏîµÄÊ±ºò·Ç³£ÓÐÓÃ£¬ËüÊ¹ÉèÖÃ
 
 ÔÚÕâ¸öÀý×ÓÖÐ£¬´¥·¢Æ÷ÊÇÒ»¸öµ¥¼ü£»Ëü»¹¿ÉÒÔÊÇÈÎºÎ×Ö·û´®¡£µ«ÈôÄãÊ¹ÓÃÒ»¸öÒÑ¾­´æÔÚ
 µÄ Vim ÃüÁî£¬¸ÃÃüÁî½«²»ÔÚÓÐÐ§¡£ËùÒÔÄã×îºÃ±ÜÃâ³öÏÖÕâÖÖÇé¿ö¡£
-    Ò»¸ö¿ÉÓÃÓÚÓ³ÉäµÄ¼üÊÇ·´Ð±¸Ü¡£ÒòÎªÄãºÜ¿ÉÄÜÏë¶¨Òå¶à¸öÓ³Éä£¬ÄÇ¾Í¼ÓÉÏÁíÒ»¸ö×Ö·û¡£
-Äã¿ÉÒÔÓ³Éä "\p" ÎªÔÚµ¥´ÊÁ½¶Ë¼ÓÔ°À¨ºÅ£¬¶øÓ³Éä "\c" Îª¼Ó»¨À¨ºÅ£¬ÀýÈç£º
+    Ò»¸ö¿ÉÓÃÓÚÓ³ÉäµÄ¼üÊÇ·´Ð±¸Ü¡£ÒòÎªÄãºÜ¿ÉÄÜÏë¶¨Òå¶à¸öÓ³Éä£¬ÄÇ¾Í¼ÓÉÏÁíÒ»¸ö×Ö
+·û¡£Äã¿ÉÒÔÓ³Éä "\p" ÎªÔÚµ¥´ÊÁ½¶Ë¼ÓÔ°À¨ºÅ£¬¶øÓ³Éä "\c" Îª¼Ó»¨À¨ºÅ£¬ÀýÈç£º
 >
 	:map \p i(<Esc>ea)<Esc>
 	:map \c i{<Esc>ea}<Esc>
 
 ÄãÐèÒªÔÚÇÃÈë\ºó£¬Á¢¼´ÇÃÈëp£¬ÒÔ±ã Vim ÖªµÀËüÃÇ×é³ÉÒ»¸öÃüÁî¡£
 
-":map" ÃüÁî£¨ÎÞ²ÎÊý£©ÁÐ³öµ±Ç°ÒÑ¶¨ÒåµÄÓ³Éä£¬ÖÁÉÙ»á°üÀ¨ÆÕÍ¨Ä£Ê½ÏÂµÄÄÇÐ©¡£¸ü¶àµÄÄÚ
-ÈÝ²Î¼û |40.1|¡£
+":map" ÃüÁî£¨ÎÞ²ÎÊý£©ÁÐ³öµ±Ç°ÒÑ¶¨ÒåµÄÓ³Éä£¬ÖÁÉÙ»á°üÀ¨ÆÕÍ¨Ä£Ê½ÏÂµÄÄÇÐ©¡£¸ü¶àµÄ
+ÄÚÈÝ²Î¼û |40.1|¡£
 
 ==============================================================================
-*05.4*	Ôö¼Ó²å¼þ					*add-plugin*	*plugin*
+*05.4*	Ôö¼Ó²å¼þ					*add-plugin* *plugin*
 
 Vim ¿ÉÒÔÍ¨¹ý²å¼þÔöÇ¿¹¦ÄÜ¡£²å¼þÆäÊµÊÇÒ»¸öµ± Vim Æô¶¯µÄÊ±ºòÄÜ±»×Ô¶¯Ö´ÐÐµÄ½Å±¾¡£
 ¼òµ¥µØ°Ñ²å¼þ·Åµ½Äã Vim µÄ plugin Ä¿Â¼ÖÐ¾Í¿ÉÒÔÊ¹ËüÉúÐ§¡£
@@ -353,8 +354,8 @@ Note ²å¼þ±ØÐëÒÔ ".vim" ½áÎ²¡£
 |plugin-details|	¹ØÓÚÈçºÎÊ¹ÓÃ²å¼þµÄÐÅÏ¢»òÕßµ±ÄãµÄ²å¼þ²»¹¤×÷µÄÊ±ºòÈçºÎ
 			´¦Àí¡£
 
-=============================================================================
-*05.5*	Ôö¼Ó°ïÖú			    *add-local-help*
+==============================================================================
+*05.5*	Ôö¼Ó°ïÖú			*add-local-help* *matchit-install*
 
 Èç¹ûÐÒÔËµÄ»°£¬Äã°²×°µÄ²å¼þ»¹»á°üÀ¨°ïÖúÎÄ¼þ¡£ÎÒÃÇÕâÀï½âÊÍÈçºÎ°²×°Õâ¸ö°ïÖúÎÄ¼þ£¬
 ÒÔ±ãÄãÄÜ·½±ãµØ»ñµÃÐÂ²å¼þµÄ°ïÖú¡£
@@ -405,8 +406,8 @@ Note ²å¼þ±ØÐëÒÔ ".vim" ½áÎ²¡£
 	:options
 
 Õâ»á´ò¿ªÒ»¸öÐÂ´°¿Ú£¬ÆäÖÐ¸ø³öÒ»¸öÑ¡ÏîµÄÁÐ±í£¬²¢¶ÔÃ¿¸öÑ¡ÏîÌá¹©Ò»ÐÐ½âÊÍ¡£ÕâÐ©Ñ¡Ïî
-±»¸ù¾ÝÖÖÀà·Ö×é¡£°Ñ¹â±êÒÆµ½Ò»¸öÖ÷ÌâÉÏÈ»ºó°´»Ø³µ¾Í¿ÉÒÔÌø×ªµ½ÄÇÀï¡£ÔÙ°´Ò»ÏÂ»Ø³µ»ò
-Õß CTRL-O ¾Í¿ÉÒÔÌø»ØÀ´¡£
+±»¸ù¾ÝÖÖÀà·Ö×é¡£°Ñ¹â±êÒÆµ½Ò»¸öÖ÷ÌâÉÏÈ»ºó°´ <Enter> ¾Í¿ÉÒÔÌø×ªµ½ÄÇÀï¡£ÔÙ°´Ò»ÏÂ
+<Enter> »òÕß CTRL-O ¾Í¿ÉÒÔÌø»ØÀ´¡£
 
 Äã¿ÉÒÔÍ¨¹ýÕâ¸ö´°¿Ú¸Ä±äÒ»¸öÑ¡ÏîµÄÖµ¡£ÀýÈç£¬ÒÆµ½ "displaying text" Ö÷Ìâ¡£È»ºó°Ñ
 ¹â±êÏÂÒÆµ½ÕâÒ»ÐÐ£º
@@ -460,8 +461,8 @@ Vim Í¨³£»á¶Ô³¤ÐÐ×Ô¶¯»»ÐÐ£¬ÒÔ±ãÄã¿ÉÒÔ¿´¼ûËùÓÐµÄÎÄ×Ö¡£µ«ÓÐÊ±×îºÃ»¹ÊÇÄÜÈÃÎÄ×ÖÔÚÒ»
 
 ÒÆ ¶¯ Ãü Áî »» ÐÐ
 
-ºÜ¶àÃüÁîÖ»ÄÜÔÚÒ»ÐÐÖÐÒÆ¶¯¡£Äã¿ÉÒÔÍ¨¹ý 'whichwrap' Ñ¡Ïî¸Ä±äËü¡£ÈçÏÂÃüÁî°ÑÕâ¸öÑ¡Ïî
-ÉèÎªÄ¬ÈÏÖµ£º
+ºÜ¶àÃüÁîÖ»ÄÜÔÚÒ»ÐÐÖÐÒÆ¶¯¡£Äã¿ÉÒÔÍ¨¹ý 'whichwrap' Ñ¡Ïî¸Ä±äËü¡£ÈçÏÂÃüÁî°ÑÕâ¸öÑ¡
+ÏîÉèÎªÄ¬ÈÏÖµ£º
 >
 	:set whichwrap=b,s
 
@@ -524,9 +525,9 @@ Vim Í¨³£»á¶Ô³¤ÐÐ×Ô¶¯»»ÐÐ£¬ÒÔ±ãÄã¿ÉÒÔ¿´¼ûËùÓÐµÄÎÄ×Ö¡£µ«ÓÐÊ±×îºÃ»¹ÊÇÄÜÈÃÎÄ×ÖÔÚÒ»
 
 ÏÔ Ê¾ Ïû Ï¢ µÄ ¿Õ ¼ä
 
-µ± Vim Æô¶¯µÄÊ±ºò£¬ÔÚÆÁÄ»µ×²¿ÓÐÒ»ÐÐ±»ÓÃÓÚÏÔÊ¾ÏûÏ¢¡£µ±ÏûÏ¢ºÜ³¤µÄÊ±ºò£¬¶àÓàµÄ²¿·Ö
-»á±»½Ø¶Ï¡£ÕâÑùÄãÖ»ÄÜ¿´µ½Ò»²¿·Ö¡£»òÕßÎÄ×Ö×Ô¶¯¹ö¶¯£¬ÄãÒª°´ <Enter> À´¼ÌÐø¡£Äã¿ÉÒÔ
-¸ø 'cmdheight' Ñ¡Ïî¸³Ò»¸öÖµ£¬ÓÃÀ´Éè¶¨ÏÔÊ¾ÏûÏ¢ËùÓÃµÄÐÐÊý¡£ÀýÈç£º
+µ± Vim Æô¶¯µÄÊ±ºò£¬ÔÚÆÁÄ»µ×²¿ÓÐÒ»ÐÐ±»ÓÃÓÚÏÔÊ¾ÏûÏ¢¡£µ±ÏûÏ¢ºÜ³¤µÄÊ±ºò£¬¶àÓàµÄ²¿
+·Ö»á±»½Ø¶Ï¡£ÕâÑùÄãÖ»ÄÜ¿´µ½Ò»²¿·Ö¡£»òÕßÎÄ×Ö×Ô¶¯¹ö¶¯£¬ÄãÒª°´ <Enter> À´¼ÌÐø¡£Äã
+¿ÉÒÔ¸ø 'cmdheight' Ñ¡Ïî¸³Ò»¸öÖµ£¬ÓÃÀ´Éè¶¨ÏÔÊ¾ÏûÏ¢ËùÓÃµÄÐÐÊý¡£ÀýÈç£º
 >
 	:set cmdheight=3
 
