@@ -27,7 +27,7 @@
 
 启动 Vim 的命令如下：
 >
-    gvim file.txt
+	gvim file.txt
 <
 在 UNIX 操作系统中，你可以在任意命令提示符下输入这个命令。如果你用的是 Microsoft
 Windows, 启动一个 MS-DOS 窗口，再输入这个命令。
