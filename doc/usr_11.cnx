@@ -1,4 +1,4 @@
-*usr_11.txt*	For Vim version 6.2.  最后修改时间:2003年4月9日
+*usr_11.txt*	For Vim version 6.3.  最后修改时间:2005年1月
 
 		    Vim 用户手册 - by Bram Moolenaar
 		(译者：Nek_in http://vimcdoc.sf.net)
@@ -126,7 +126,7 @@ Vim 会列出所有它能找到的交换文件。它还会从其它目录寻找�
 文件名是什么，然后根据需要修改一下。根据 'directory' 选项的值你可以知道 Vim 会
 把交换文件放到什么地方。
 
-	Note:
+	备注:
 	Vim 在 'dir' 选项指定的目录中寻找名为 "filename.sw?" 的交换文件。如果通
 	配符不能正常工作（例如 'shell' 选项不正确），Vim 转而尝试文件
 	"filename.swp"。如果仍失败，你就只能通过给定交换文件的名称来恢复原

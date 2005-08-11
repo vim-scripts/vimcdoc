@@ -1,9 +1,9 @@
-*os_dos.txt*    For Vim version 6.1.  原文最后更新: 2001年9月3日
+*os_dos.txt*    For Vim version 6.3.  最后更新: 2005年3月21日
 
 
-		  VIM 参考手册    作者：Bram Moolenaar
-		                  翻译：Dasn<dasn@users.sf.net> 
-		                  VCD主页：http://vimcdoc.sf.net
+		  VIM 参 考 手 册    作者：Bram Moolenaar
+		                     译者: Dasn<dasn@users.sf.net> 
+		                     VCD主页：http://vimcdoc.sf.net
 
 							*dos* *DOS*
 本文描述 MS-DOS 和 Win32 版本共有的特性。你还可以参考
@@ -27,44 +27,44 @@
 册表或添加环境变量，只要保证 Vim 目录包含在路径中，或者在桌面上做一个快捷方式
 也可以。
 
-通常 Vim 资源文件（“_vimrc” 和 “_gvimrc”）放在 Vim 运行目录的上一级目录。
+通常 Vim 资源文件（"_vimrc" 和 "_gvimrc"）放在 Vim 运行目录的上一级目录。
 如果你想把它放在别的地方，可以设置环境变量指向资源文件所在的目录，例如：
 >
 	set VIM=C:\user\piet
 <
-Vim 会在 “c:\user\piet\”寻找资源文件。
-Note: 多用户计算机需要这种功能，否则还是把 _vimrc 放在原来的地方简单些。
+Vim 会在 "c:\user\piet\"寻找资源文件。
+备注: 多用户计算机需要这种功能，否则还是把 _vimrc 放在原来的地方简单些。
 
 如果你改变了 vim.exe 的位置，就需要设置一下 $VIM 变量，这样相应的运行目录（
-runtime directory）就是“$VIM/vim{version}”。例如： >
+runtime directory）就是"$VIM/vim{version}"。例如： >
 	set VIM=E:\vim
-Vim 会在“e:\vim\vim54” 寻找 5.4 版本运行时需要的文件。
-Note: 强烈建议不要这样做。最好把可执行文件和运行时需要的文件放到同一个目录里。
+Vim 会在"e:\vim\vim54" 寻找 5.4 版本运行时需要的文件。
+备注: 强烈建议不要这样做。最好把可执行文件和运行时需要的文件放到同一个目录里。
 	
 如果你把可执行文件和资源文件都移动了，那么你必须用 $VIM 和 $VIMRUNTIME 两个环
-境变量来分别指定资源文件（“_vimrc” 和 “_gvimrc”）和运行目录的位置。例如：
+境变量来分别指定资源文件（"_vimrc" 和 "_gvimrc"）和运行目录的位置。例如：
 >
 	set VIM=C:\usr\piet
 	set VIMRUNTIME=E:\vim\vim54
 
-这样，Vim 可以在“c:\user\piet\”目录下找到资源文件，在“E:\vim\vim54”目录下
+这样，Vim 可以在"c:\user\piet\"目录下找到资源文件，在 "E:\vim\vim54" 目录下
 找到运行时所需的文件。
 
 要想了解更多内容，见 |$VIM| 和 |$VIMRUNTIME| 。
 
 在 Windows 95 下，你可以在 C:\autoexec.bat 里设置 $VIM 。例如： >
   set VIM=D:\vim
-在 Windows NT 里，你可以在“控制面板－系统”或者右键单击“我的电脑”－“属性”，
-“环境变量”选项卡里为每一个用户设置环境变量。
+在 Windows NT 里，你可以在“控制面板－系统”或者右键单击 “我的电脑”
+－“属性”，“环境变量” 选项卡里为每一个用户设置环境变量。
 
 ==============================================================================
 2.使用反斜杠 						*dos-backslash*
 
-在文件名（这里是指带路径的文件名 ——译者）里使用反斜杠（\）可能会出问题。在某
+在文件名（这里是指带路径的文件名 译者）里使用反斜杠（\）可能会出问题。在某
 些命令里，VI 要用两个反斜杠表示反斜杠。Vim 在这一问题上宽容一些，它不会从文件
-名中删除反斜杠，所以直接用“:e c:\foo\bar”就可以工作。但是当反斜杠出现在一些
+名中删除反斜杠，所以直接用":e c:\foo\bar"就可以工作。但是当反斜杠出现在一些
 特殊字符（空格、逗号、反斜杠，等等）前面时，Vim 就会删除反斜杠。用斜杠来避免问
-题：“:e c:/foo/bar”，同样可以。Vim 会自动把斜杠替换成反斜杠以避免和一些
+题：":e c:/foo/bar"，同样可以。Vim 会自动把斜杠替换成反斜杠以避免和一些
 MS-DOS 或 Win32 程序产生问题。
 
 如果你喜欢用斜杠，就设置 'shellslash' 选项。Vim 就会在自动补全文件名的时候，用
@@ -111,17 +111,17 @@ CTRL-Del	<M-N><M-X>		d
 4. 屏幕的输出与颜色					*dos-colors*
 
 默认的写屏操作是直接调用 bios 完成的，这在大多数系统上可以工作。你不需要用
-ansi.sys 。你可以使用 “:mode”命令设置当前屏幕。 见 |:mode| 。
+ansi.sys 。你可以使用 ":mode"命令设置当前屏幕。 见 |:mode| 。
 
 要想改变 Vim 的颜色，可以使用 |:highlight| 命令。Normal 颜色组（highlight
 group）决定了 Vim 用什么颜色显示正常的文本。例如，要设置灰色字体和蓝色背景： >
 	:hi Normal ctermbg=Blue ctermfg=grey
 要了解其它可用的颜色组，参见 |highlight-groups| 。
 
-DOS 控制台不支持“粗体”、“下划线”之类的属性。你可以用“:mode”的五种属性值
-和 'termcap' 的九种属性值来设置颜色。 Note: 当你用“:highlight”命令设置了颜色
-后，这些属性不必要设置，它们是为了兼容老版本的 Vim 而保留的。|'highlight'| 选
-项指定了对如下五种行为进行加亮：
+DOS 控制台不支持 “粗体”、“下划线” 之类的属性。你可以用 ":mode" 的五种属性值
+和 'termcap' 的九种属性值来设置颜色。 备注: 当你用 ":highlight" 命令设置了
+颜色后，这些属性不必要设置，它们是为了兼容老版本的 Vim 而保留的。
+|'highlight'| 选项指定了对如下五种行为进行加亮：
 >
 	:set t_mr=^V^[\|xxm		颜色取反的时候
 	:set t_md=^V^[\|xxm		字体加粗的时候
@@ -140,7 +140,7 @@ DOS 控制台不支持“粗体”、“下划线”之类的属性。你可以�
 ^[ 代表 <Esc>
 
 （在输入上面的命令时，按下 CTRL-V Vim 只会显示 ^ ，这时不要输入 V ，直接输入
-<Esc> 即可。——译者）
+<Esc> 即可。译者）
 
 你必须把上面令名里的 xx 换成相应的十进制数，这个数是前景色与背景色相加的和：
 
@@ -166,7 +166,7 @@ DOS 控制台不支持“粗体”、“下划线”之类的属性。你可以�
 会使字体闪烁。
 
 代码 0 表示颜色恢复到起始状态（起始状态的值通常是 7 ，亮灰色文字，黑色背景，但
-是你可以在 vimrc 文件里改变这些初始值——见下面）。 't_me' 的初始值是 0 。
+是你可以在 vimrc 文件里改变这些初始值见下面）。 't_me' 的初始值是 0 。
 
 下面是 Vim 默认加亮模式：
 	t_mr	112	 反色模式：黑色文字 (0) ，亮灰色背景 (112)
@@ -203,24 +203,24 @@ DOS 控制台不支持“粗体”、“下划线”之类的属性。你可以�
 如果 'fileformat' 设置为 "unix" ，Vim 则使用一个 <NL> 作为 <EOL>，并且把 <CR>
 显示为 ^M 。
 
-你可以用 Vim 把 <NL> 替换成 <CR><NL> ，在任何模式下读，保存成 Dos 格式（“:set
-ff=dos”）。
+你可以用 Vim 把 <NL> 替换成 <CR><NL> ，在任何模式下读，保存成 Dos 格式（":set
+ff=dos"）。
 
-你可以用 Vim 把 <CR><NL> 替换成 <NL> ，在 Dos 模式下读，保存成 Unix 格式（“:
-set ff=unix”）。
+你可以用 Vim 把 <CR><NL> 替换成 <NL> ，在 Dos 模式下读，保存成 Unix 格式（":
+set ff=unix"）。
 
 Vim 会自动设置 'fileformat' 的值（默认值）。|'fileformat'| |'fileformats'|
 
 如果你要编辑一个脚本文件或者一个二进制文件，那么你应该在装载这个文件之前预先设
 定 'binary' 选项。脚本和二进制文件可能包含 <NL> ，Vim 要把它替换成 <CR><NL> 。
-你可以在启动时加上 “-b”参数，这样可以自动设置 'binary' 选项。
+你可以在启动时加上 "-b"参数，这样可以自动设置 'binary' 选项。
 
 ==============================================================================
 6. :cd 命令						*dos-:cd*
 
-“:cd”命令能识别驱动器符号，并且可以改变当前的驱动器。命令“:cd c:”使驱动器
-C 成为当前驱动器。命令“:cd d:\foo”，切换当前目录到“D 盘的 foo 目录下”。Vim
-也能识别 UNC 路径。例如：“:cd \\server\share\dir”。   |:cd|
+":cd"命令能识别驱动器符号，并且可以改变当前的驱动器。命令 ":cd c:"使驱动器
+C 成为当前驱动器。命令":cd d:\foo"，切换当前目录到“D 盘的 foo 目录下”。Vim
+也能识别 UNC 路径。例如：":cd \\server\share\dir"。   |:cd|
 
 ==============================================================================
 7. 中止键						*dos-CTRL-Break*
@@ -250,11 +250,11 @@ Vim 用标准的 Windows API 函数来获取临时文件名（用于过滤）。
 ==============================================================================
 9. 默认的 Shell 选项					*dos-shell*
 
-在 Windows 95 里，默认的 'sh' ( 'shell' ) 选项是 “command.com”，而在 Windows
-NT 里是 “cmd.exe”。如果设置了环境变量 SHELL ，Vim 就使用 SHELL 指定的程序，
-如果没有设置 SHELL ，而设置了环境变量 COMSPEC ，Vim 就使用 COMSPEC 。Vim 用“
-<shell> /c <command_name>”执行外部命令。输入 CTRL-Z 调用一个子 Shell 。要返回
-Vim 输入 “exit”。	|'shell'| |CTRL-Z|
+在 Windows 95 里，默认的 'sh' ( 'shell' ) 选项是 "command.com"，而在 Windows
+NT 里是 "cmd.exe"。如果设置了环境变量 SHELL ，Vim 就使用 SHELL 指定的程序，
+如果没有设置 SHELL ，而设置了环境变量 COMSPEC ，Vim 就使用 COMSPEC 。Vim 用"
+<shell> /c <command_name>"执行外部命令。输入 CTRL-Z 调用一个子 Shell 。要返回
+Vim 输入 "exit"。	|'shell'| |CTRL-Z|
 
 如果你运行一个第三方的 shell，你可能需要自己设置一下 |'shellcmdflag'| ('shcf')
 和 |'shellquote'| ('shq') 或者 |'shellxquote'| ('sxq') 选项。不幸的是，这些选

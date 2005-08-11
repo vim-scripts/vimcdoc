@@ -1,8 +1,8 @@
-*develop.txt*	 For Vim version 6.2.   最后更改：2002年9月3日
+*develop.txt*	 For Vim version 6.2.   最后更改：2005年3月3日
  
 
 		    Vim 参考手册    作者：Bram Moolenaar
-	  翻译：jwdu <junweidu@ustc.edu>, iCrazy <icrazy@ustc.edu>
+	  译者: jwdu <junweidu@ustc.edu>, iCrazy <icrazy@ustc.edu>
 			    http://vimcdoc.sf.net
 
 
@@ -22,7 +22,7 @@ Vim 的开发						*development*
 
 首先说最重要的内容（概略的说一下）。
 
-Note 许多项目是互相冲突的，但这是故意的。对于它们，你必须自己平衡一下。
+注意 许多项目是互相冲突的，但这是故意的。对于它们，你必须自己平衡一下。
 
 VIM 是 ... 和 VI 兼 容 的				*design-compatible*
 
@@ -259,7 +259,7 @@ Feature 应该总是以 "FEAT_"开头： >
 
 	    local = arg1 * arg2;
 
-NOTE: 不要使用 ANSI 风格的函数声明。一些人仍然在使用不支持它的编译器。
+备注: 不要使用 ANSI 风格的函数声明。一些人仍然在使用不支持它的编译器。
 
 
 空 格 和 标 点						*style-spaces*

@@ -1,56 +1,64 @@
-The following table contains the terminologies Vim used
-in its documentation and The corresponding Chinese phrases.
+The following table contains the terminologies used by Vim
+in its documentation and the corresponding Chinese phrases.
 
 The lists are ever changing. Suggestions are welcomed!
 
 
 
-Note: This is is meant to be used with Vim!
+Note: This is meant to be used with Vim!
 
 
 *Compulsory*
 +----------------------------------------------------+
-|  ENGLISH                             ÖĞÎÄ          |
+|  ENGLISH                             ä¸­æ–‡          |
 +----------------------------------------------------+
  + Ex                                 Ex
  + GUI                                GUI
  + UNIX                               UNIX
  + Vi                                 Vi
  + Vim                                Vim
- + abbreviations                      ËõĞ´
- + alternative file					  ±¸Ñ¡ÎÄ¼ş
- + autocommand                        ×Ô¶¯ÃüÁî
- + backslash                          ·´Ğ±¸Ü
- + block                              ¿é
- + boolean                            ²¼¶û
- + buffer                             »º³å
- + column                             ÁĞ
- + comment                            ×¢ÊÍ
- + digraph							  ¶şºÏ×ÓÄ¸
- + event                              ÊÂ¼ş
- + expression                         ±í´ïÊ½
- + folding                            ÕÛµş
- + identifier						  ±êÊ¶·û
- + indent                             Ëõ½ø
- + key mapping						  ¼üÅÌÓ³Éä
+ + abbreviations                      ç¼©å†™
+ + alternative file					  å¤‡é€‰æ–‡ä»¶
+ + autocommand                        è‡ªåŠ¨å‘½ä»¤
+ + backslash                          åæ–œæ 
+ + block                              å—
+ + boolean                            å¸ƒå°”
+ + buffer                             ç¼“å†²
+ + column                             åˆ—
+ + comment                            æ³¨é‡Š
+ + CVS								  CVS
+ + digraph							  äºŒåˆå­æ¯
+ + event                              äº‹ä»¶
+ + expression                         è¡¨è¾¾å¼
+ + GNOME							  GNOME
+ + GTK								  GTK
+ + GUI								  GUI
+ + folding                            æŠ˜å 
+ + identifier						  æ ‡è¯†ç¬¦
+ + indent                             ç¼©è¿›
+ + KDE								  KDE
+ + key mapping						  é”®ç›˜æ˜ å°„
  + lisp                               lisp
- + mark and tag                       ±ê¼Ç£¬±êÇ©
- + marker							  ±êÖ¾ (folding)
- + offset                             Æ«ÒÆ
- + operator                           ²Ù×÷·û 
- + paragraph                          ¶ÎÂä
+ + locale                             locale
+ + mark and tag                       æ ‡è®°ï¼Œæ ‡ç­¾
+ + marker							  æ ‡å¿— (folding)
+ + offset                             åç§»
+ + operator                           æ“ä½œç¬¦ 
+ + paragraph                          æ®µè½
  + quickfix							  quickfix
- + register                           ¼Ä´æÆ÷
- + scroll                             ¹öÆÁ
- + section							  ½Ú
- + sentence							  ¾ä×Ó
+ + register                           å¯„å­˜å™¨
+ + scroll                             æ»šå±
+ + section							  èŠ‚
+ + sentence							  å¥å­
+ + session							  ä¼šè¯
  + shell							  shell
  + shiftwidth                         shiftwidth
- + swap file                          ½»»»ÎÄ¼ş
- + synatx highligh                    Óï·¨¸ßÁÁ
- + text object                        ÎÄ±¾¶ÔÏó
- + visual mode                        visual Ä£Ê½
- + yank                               ¼ôÇĞ
+ + socket							  socket
+ + swap file                          äº¤æ¢æ–‡ä»¶
+ + syntax highlight                   è¯­æ³•é«˜äº®
+ + text object                        æ–‡æœ¬å¯¹è±¡
+ + visual mode                        visual æ¨¡å¼
+ + yank                               å‰ªåˆ‡
  + Ruby								  Ruby
  + Perl								  Perl
  + cscope							  cscope
@@ -59,54 +67,58 @@ Note: This is is meant to be used with Vim!
  + OLE								  OLE
  + Tcl								  Tcl
  + SNiFF+							  SNiFF+
+ + view								  è§†å£
  + Win32							  Win32
  + Windows							  Windows
- + Plugin							  ²å¼ş
+ + Plugin							  æ’ä»¶
  + regexp							  regexp
- + pattern							  Ä£Ê½
- + matching							  Æ¥Åä
+ + pattern							  æ¨¡å¼
+ + matching							  åŒ¹é…
  + man page							  man page
  + modeline							  modeline
- + shell script						  shell ½Å±¾
- + toolbar							  ¹¤¾ßÌõ
+ + shell script						  shell è„šæœ¬
+ + toolbar							  å·¥å…·æ¡
  + tabstop							  tabstop
  + line break						  ???
- + local identifier					  ±¾µØ±êÊ¶·û
- + global identifier				  È«¾Ö±êÊ¶·û
- + popup menu						  µ¯³ö²Ëµ¥
- + keyword							  ¹Ø¼ü×Ö
- + TABSTOP							  ÖÆ±íÎ»
- + you								  Äã
+ + local identifier					  æœ¬åœ°æ ‡è¯†ç¬¦
+ + global identifier				  å…¨å±€æ ‡è¯†ç¬¦
+ + popup menu						  å¼¹å‡ºèœå•
+ + keyword							  å…³é”®å­—
+ + TABSTOP							  åˆ¶è¡¨ä½
+ + X11								  X11
+ + you								  ä½ 
 
 *Recommended*
 +----------------------------------------------------+
-|  ENGLISH                             ÖĞÎÄ          |
+|  ENGLISH                             ä¸­æ–‡          |
 +----------------------------------------------------+
- + active                             »î¶¯µÄ
- + append                             Ìí¼Ó
- + arg                                ²ÎÊı
- + argument                           ²ÎÊı
- + atom                               Æ¥ÅäÔ­×Ó
- + brace							  À¨ºÅ
- + bracket                            ·½À¨ºÅ
- + cursor                             ¹â±ê
- + inner							  ÄÚ
- + join								  Á¬½Ó
- + layout                             ²¼¾Ö
- + like                               Èç
- + literally						  ÕÕ×ÖÃæÒâË¼µÄ
- + recall                             »ØÒä
- + reset							  ¸´Î»
- + suspend							  ¹ÒÆğ
- + tooltip                            ÌáÊ¾
+ + active                             æ´»åŠ¨çš„
+ + append                             æ·»åŠ 
+ + arg                                å‚æ•°
+ + argument                           å‚æ•°
+ + atom                               åŒ¹é…åŸå­
+ + brace							  æ‹¬å·
+ + bracket                            æ–¹æ‹¬å·
+ + cursor                             å…‰æ ‡
+ + inner							  å†…
+ + join								  è¿æ¥
+ + layout                             å¸ƒå±€
+ + like                               å¦‚
+ + literally						  ç…§å­—é¢æ„æ€çš„
+ + recall                             å›å¿†
+ + reset							  å¤ä½
+ + suspend							  æŒ‚èµ·
+ + tooltip                            æç¤º
  + verbose							  verbose
- + word								  µ¥´Ê
- + format							  ¸ñÊ½»¯
- + session							  »á»°
- + completion, complete				  ²¹È«
- + encryption						  ¼ÓÃÜ
- + portable							  ¿ÉÒÆÖ²µÄ
- + word processor					  ×Ö´¦ÀíÆ÷
+ + word								  å•è¯
+ + format							  æ ¼å¼åŒ–
+ + session							  ä¼šè¯
+ + completion, complete				  è¡¥å…¨
+ + encryption						  åŠ å¯†
+ + portable							  å¯ç§»æ¤çš„
+ + widget							  ???
+ + word processor					  å­—å¤„ç†å™¨
+ + scope							  ä½œç”¨åŸŸ
 
-------------------------------------------------------------------------------
+-----------------------------------------------------------
  vim:tw=78:ts=4:norl:

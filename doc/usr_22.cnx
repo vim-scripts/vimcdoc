@@ -1,7 +1,7 @@
-*usr_22.txt*	For Vim version 6.3.		最近更新：2004年6月
+*usr_22.txt*	For Vim version 6.3.	最近更新：2005年3月
 
 		     VIM 用户手册 - Bram Moolenaar 著
-		  (译者： Chimin Yen http://vimcdoc.sf.net )
+		  译者： Chimin Yen http://vimcdoc.sf.net
 				    
 			      寻找要编辑的文件
 
@@ -311,7 +311,7 @@ Vim 将为你键入的文件名找到最佳匹配. 如果只有一个缓冲与�
 删除了当前缓冲, 你也就关闭了当前窗口. 如果它是最后一个窗口, Vim 将找一个缓冲
 来编辑. 你无法什么也不编辑!  
 
-	Note:
+	备注:
 	即使用 ":bdelete" 命令删除了缓冲以后, Vim 依然记得它. 这个缓冲实际上
 	成了 "表列外" 缓冲, 它不再出现在 ":buffers" 命令所报告的列表中.  而
 	":buffers!" 命令则将表列 "表列外" 缓冲 (没错, Vim 无所不能). 要让 Vim 

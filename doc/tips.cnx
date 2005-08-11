@@ -1,8 +1,8 @@
-*tips.txt*	For Vim version 6.3.  最近更新: 2004年6月
+*tips.txt*	For Vim version 6.3.  最近更新: 2005年3月
 
 
 		     Vim 参考手册    作者：Bram Moolenaar
-	   (翻译：iCrazy <icrazy@ustc.edu>  http://vimcdoc.sf.net)
+	   译者: iCrazy <icrazy@ustc.edu>  http://vimcdoc.sf.net
 
 
 使用 Vim 的技巧						*tips*
@@ -141,10 +141,10 @@ Vim 里面有不少功能可以帮助你们编辑 C 程序。以下是一个概�
 附：如果你发现了任何差异，那么最好让某人（或许是你的系统管理员）彻底的检查
     一下 termcap 和 terminfo 的一致性。
 
-NOTE 1: 如果你在 feature.h 中定义了 FEAT_XTERM_SAVE 之后又重新编译了 Vim，那
+备注 1: 如果你在 feature.h 中定义了 FEAT_XTERM_SAVE 之后又重新编译了 Vim，那
 么内置的 xterm 会有上述的 "te" 和 "ti" 条目。 
 
-NOTE 2: 如果你希望禁止屏幕切换，并且不希望改变你的 termcap，你可以在你的
+备注 2: 如果你希望禁止屏幕切换，并且不希望改变你的 termcap，你可以在你的
 .vimrc 文件中加入这一行： >
 	:set t_ti= t_te=
 
@@ -297,7 +297,7 @@ digraph.c
 	" forward one word
 	:cnoremap <Esc><C-F>	<S-Right>
 
-NOTE:前提条件是 '<' 标志不在 'cpoptions' 选项中。 |<>|
+备注: 前提条件是 '<' 标志不在 'cpoptions' 选项中。 |<>|
 
 							*format-bullet-list*
 这个映射可以格式化任何 bullet 列表，不过它需要在每一个条目的上下都各有一
@@ -312,16 +312,16 @@ NOTE:前提条件是 '<' 标志不在 'cpoptions' 选项中。 |<>|
 	:let m = m . "5lDJ"		      " 把文本放到 bullet 之后
 	:execute m			      |" 定义这个 mapping
 
-（符号 <> |<>|。  Note 这些必须按照字面逐个输入。  ^W 是 "^" 和 "W"，而不是
+（符号 <> |<>|。  注意 这些必须按照字面逐个输入。  ^W 是 "^" 和 "W"，而不是
 CTRL-W。 如果 '<' 标志不在 'cpoptions' 选项中，你可以把这些拷贝/粘贴到 Vim 中
 去）
 
-Note 最后一个注释以 |" 开始，因为 ":execute" 不能直接识别一个注释。
+注意 最后一个注释以 |" 开始，因为 ":execute" 不能直接识别一个注释。
 
 你还需要把 'textwidth' 设置成一个非0值，例如： >
 	:set tw=70
 
-以下这个映射可以达到同样的效果，不过它从第一行获得列表的缩进(Note: 这个
+以下这个映射可以达到同样的效果，不过它从第一行获得列表的缩进(备注: 这个
 映射是在同一行中输入的，其中有很多空格): >
 	:map _f :set ai<CR>}{a                                                          <Esc>WWmmkD`mi<CR><Esc>kkddpJgq}'mJO<Esc>j
 <

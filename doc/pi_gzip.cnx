@@ -1,8 +1,8 @@
-*pi_gzip.txt*	For Vim version 6.2.  原文最近更新: 2002年10月29日
+*pi_gzip.txt*	For Vim version 6.2.  最近更新: 2005年3月
 
 
 		     Vim 参考手册    作者：Bram Moolenaar
-	   (翻译：iCrazy <icrazy@ustc.edu>  http://vimcdoc.sf.net) 
+	   译者: iCrazy <icrazy@ustc.edu>  http://vimcdoc.sf.net
 
 
 用 Vim 编辑压缩的文件				*gzip* *bzip2* *compress*

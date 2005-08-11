@@ -3,7 +3,7 @@
 
 		  VIM REFERENCE MANUAL    by Sven Verdoolaege
 					 and Matt Gerassimof
-			    (译者：foolstone@ustc.edu)
+			    译者：foolstone@ustc.edu
 
 
 Perl 与 Vim						*perl* *Perl*
@@ -18,14 +18,14 @@ Perl 接口只有在编译 Vim 时加入 |+perl| 才能使用。
 ==============================================================================
 1. 编辑 Perl 文件					*perl-editing*
 
-Vim 语法高亮显示支持 Perl和POD文件。Vim假设后缀为.pl和.pm的文件时Perl文件。Vim
+Vim 语法高亮显示支持 Perl和POD文件。Vim假设后缀为.pl和.pm的文件是Perl文件。Vim
 同时不管文件后缀而测试文件的首行来检查一个文件是否为Perl脚本(参见Vim的语法目录
 下的scripts.vim)。Vim假设带后缀.POD的文件是POD文本。
 
-要使用Perl标签，你需要Exuberant ctags的最新版本。在这里可以找到它们:
+要使用Perl标签，你需要Exuberant ctags的最新版本。在这里可以找到它:
 	http://ctags.sourceforge.net
 当然，作为选择你还可以用一个叫pltags.pl的Perl脚本，它是和Vim一起发行的，他的藏
-身之处位于$VIMRUNTIME/tools目录。现在这个脚本比Exuberant ctags的Perl支持具有更
+身之处位于$VIMRUNTIME/tools目录。现在这个脚本比Exuberant ctags的Perl支持具备更
 多的功能。
 
 ==============================================================================
@@ -51,11 +51,11 @@ http://www.perl.com/CPAN/ports/nt/Standard/x86/
 {script}
 {endpattern}
 			执行Perl脚本{script}。
-			{endpattern}不能由任何前导空格。如果忽略了{endpattern}，
+			{endpattern}不能有任何前导空格。如果忽略了{endpattern}，
 			就会像|:append|和|:insert|命令那样默认到达一个点'.'。
 			|:perl|命令的这种形式主要是用来在vim脚本里面包含perl代
 			码。
-			Note:当Perl没有被编译进vim了这条命令不能工作。为了避
+			备注:当Perl没有被编译进vim时这条命令不能工作。为了避
 			免出错请参考|script-here|。
 vim脚本示例: >
 
@@ -70,7 +70,7 @@ vim脚本示例: >
 <
 
 							*:perldo* *:perld*
-:[range]perld[o] {cmd}  对[range]中的每行执行Perl命令{cmd},同时$_依次被设定
+:[range]perld[o] {cmd}  对[range]中的每行执行Perl命令{cmd},同时$_依次被赋值
 			为每行的文本，但不包括行尾的<EOL>。改变$_会改变每行
 			的内容，但是用这个命令不能添加或者删除行。[range]的
 			缺省值是整个文件:"1，$"。
@@ -135,13 +135,13 @@ VIM::SetOption({arg})
 
 							*perl-Buffers*
 VIM::Buffers([{bn}...]) 没有参数的时候，在列表上下文里面返回所有缓冲区的列表
-			或者在标量上下文是返回缓冲区的个数。对于一个缓冲区名字
+			或者在标量上下文时返回缓冲区的个数。对于一个缓冲区名字
 			列表或者数量{bn},返回匹配{bn}的缓冲区列表，与Vim内部函
 			数|bufname()|使用同样的规则。
 
 							*perl-Windows*
 VIM::Windows([{wn}...]) 没有参数的时候，在列表上下文里面返回所有窗口的列表或者在
-			标量上下文是返回窗口的个数。对于一个窗口名字数量列表{wn},
+			标量上下文时返回窗口的个数。对于一个窗口名字数量列表{wn},
 			返回匹配{wn}的窗口列表。
 
 							*perl-DoCommand*
@@ -189,12 +189,12 @@ Buffer->Delete({lnum}, {lnum}?)
 							*perl-Append*
 Buffer->Append({lnum}, {line}, {line}?, ...)
 			把每个{line}字符串添加到缓冲区的第{lnum}行后面。{line}
-			列表可以时一个数组。
+			列表可以是一个数组。
 
 							*perl-Set*
 Buffer->Set({lnum}, {line}, {line}?, ...)
-			替代缓冲区从第{lnum}行开始，由{lines}指定的一行或者躲行。
-			{line}列表可以是一个数组。如果参数无效，替代就不会发生。
+			替代缓冲区从第{lnum}行开始，由{lines}指定的一行或者多行。
+			{line}列表可以是一个数组。如果参数无效，就不作替代。
 $main::curwin
 			当前窗口对象。
 $main::curbuf
@@ -216,6 +216,6 @@ $main::curbuf
       endfunction
       call DefPerl()
     endif
-Note: "EOF"必须在行首(前面不能有前导空格)。
+备注: "EOF"必须在行首(前面不能有前导空格)。
 
  vim:tw=78:ts=8:ft=help:norl:

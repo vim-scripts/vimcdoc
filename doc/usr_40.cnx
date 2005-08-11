@@ -1,7 +1,7 @@
-*usr_40.txt*	For Vim version 6.3.  最近更新：2004年6月
+*usr_40.txt*	For Vim version 6.3.  最近更新：2005年3月
 
 		     VIM USER MANUAL - by Bram Moolenaar
-		     (译者：lang2 http://vimcdoc.sf.net)
+		     译者：lang2 http://vimcdoc.sf.net
 
 			      创建新的命令
 
@@ -249,7 +249,7 @@ Vim 编辑器允许你定义你自己的命令。你可以像运行其他命令�
 
 现在当你执行 ":DeleteFirst" 命令时，Vim 执行 ":1delete" 来删除第一行。
 
-	Note:
+	备注:
 	用户定义的命令必须以大写字母开始。你不能使用 ":X", ":Next" 和
 	":Print"。也不能用下划线！你可以使用数字，但是这种做法不受鼓励。
 
@@ -412,7 +412,7 @@ Vim 会显示 "Hello World"。 然而如果你加上一个双引号，就不行�
 
 如果 Vim 能够正确的识别文件类型的话，它将为你设定 'filetype' 选项。这会触发
 Filetype 事件。你可以利用这个来为某一类型的文件做编辑的准备工作。例如，要为
-纯文文件调入一组缩写: >
+纯文件调入一组缩写: >
 
 	:autocmd Filetype text  source ~/.vim/abbrevs.vim
 
@@ -441,7 +441,7 @@ Filetype 事件。你可以利用这个来为某一类型的文件做编辑的�
    当包括一个斜杠时，Vim 会试着匹配文件 ("/home/biep/readme.txt") 的完整路径和
 相对路径 (例如： "biep/readme.txt")。
 
-	Note:
+	备注:
 	当在使用反斜杠作为文件分割符的系统 (如 MS-Windows) 上工作时，你也得在
 	自动命令中使用正斜杠。因为反斜杠有特殊的意义，这会使编写匹配模式变得容
 	易些。同时也使自动命令更据可以移植性。

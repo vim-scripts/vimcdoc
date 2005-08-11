@@ -1,7 +1,7 @@
-*usr_42.txt*	For Vim version 6.3.  最近更新：2004年6月
+*usr_42.txt*	For Vim version 6.3.  最近更新：2005年3月
 
 		     VIM USER MANUAL - by Bram Moolenaar
-		     (译者：lang2 http://vimcdoc.sf.net)
+		     译者：lang2 http://vimcdoc.sf.net
 
 			      添加新菜单
 
@@ -284,7 +284,7 @@ Unix 系统可以使用 "~/.vim/bitmaps/Compile.xpm" 目录。
 
 	:tmenu ToolBar.Make  Run make in the current directory
 <
-	Note:
+	备注:
 	注意大小写的使用。"Toolbar" 和 "toolbar" 和 "ToolBar"
 	都是不同的
 

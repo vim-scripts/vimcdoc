@@ -1,7 +1,7 @@
-*usr_01.txt*	For Vim version 6.3.  最近更新: 2004年6月
+*usr_01.txt*	For Vim version 6.3.  最近更新: 2005年3月
 
 			VIM 用户手册 - 作者: Bram Moolenaar
-			(译者：Nek_in http://vimcdoc.sf.net)
+			译者：Nek_in http://vimcdoc.sf.net
 
 				关于本手册
 
@@ -79,7 +79,7 @@ Vim 的手册分成两个部分：
 
 参考 |vimrc| 和 |compatible-default| 可以获得更多信息。
 
- 	Note:
+ 	备注:
  	本手册是关于普通形态的 Vim 的，Vim 还有一种形态叫"evim"(easy vim)，那也是
  	Vim，不过被设置成"点击并输入"风格，就像 Notepad 一样。它总是处于"插
  	入"状态，感觉完全不同于通常形态下的 Vim。由于它比较简陋，将不在本手册中

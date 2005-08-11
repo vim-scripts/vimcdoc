@@ -1,7 +1,7 @@
-*usr_20.txt*	For Vim version 6.3.		最近更新：2004年6月
+*usr_20.txt*	For Vim version 6.3.	最近更新：2005年3月
 
 		     VIM 用户手册 - Bram Moolenaar 著
-		  (译者： Chimin Yen http://vimcdoc.sf.net )
+		  译者： Chimin Yen http://vimcdoc.sf.net 
 				    
 			     快速键入命令行命令
 
@@ -48,7 +48,7 @@ Vim 具备若干基本功能，以简化键入命令的工作。 你可以缩写
 	CTRL-B 或 <Home>	命令行行首
 	CTRL-E 或 <End>		命令行行尾
 
-	Note:
+	备注:
 	<S-Left> (光标左移键和 Shift 键同时按下) 和 <C-Left> (光标左移键和
 	Control 键同时按下) 并非在所有键盘上都有效。其它 Shift 和 Control
 	组合键也是这种情况。
@@ -91,7 +91,7 @@ CTRL-U 删除命令行上全部文字，从而让你从头开始。
 你本想执行一个 : 或 / 命令，但却改变了主意。清除命令行上你已经键入的文字却不
 不执行该命令，按 CTRL-C 或 <Esc>。
 
-	Note:
+	备注:
 	<Esc> 是普遍采用的 "退出" 键。不幸的是，在过去美好的 Vi 版本里，在命
 	令行上按 <Esc> 却是执行命令! 由于那会被认为是程序 bug，Vim 采用 <Esc>
 	来取消命令。但其 'cpoptions' 选项可以使 Vim 跟 Vi 兼容。而且，利用一

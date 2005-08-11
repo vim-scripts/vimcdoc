@@ -1,7 +1,7 @@
-*usr_12.txt*	For Vim version 6.3.  最近更新：2004年6月
+*usr_12.txt*	For Vim version 6.3.  最近更新：2005年3月
 
 		    Vim用户手册 - Bram Moolenaar
-		(译者：Nek_in http://vimcdoc.sf.net)
+		译者：Nek_in http://vimcdoc.sf.net
 
 				小窍门
 
@@ -66,7 +66,7 @@
 Vim 会在最后一个文件上报错，因为 ":wnext" 无法移到下一个文件上。这时所有的文件
 中的操作都完成了。
 
-	Note:
+	备注:
 	在回放记录的时候，任何错误都会中止回放的过程。所以，要注意保证记录中
 	的命令不会产生错误。
 

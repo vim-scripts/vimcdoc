@@ -1,8 +1,8 @@
-*if_pyth.txt*   For Vim version 6.3.  最近更新：2004年6月
+*if_pyth.txt*   For Vim version 6.3.  最近更新：2005年3月
 
 
 		  VIM REFERENCE MANUAL    by Paul Moore
-		  (译者：lang2 http://vimcdoc.sf.net)
+		  译者：lang2 http://vimcdoc.sf.net
 
 
 Vim 的 Python 编程界面					*python* *Python*
@@ -28,7 +28,7 @@ Vim 的 Python 界面仅当 |+python| 特性被编译进 Vim 时才有效。
 {script}
 {endmarker}
 			执行 Python 脚本 {script}.
-			Note: 此命令在没有编译进 Python 特性时无效。为了
+			备注: 此命令在没有编译进 Python 特性时无效。为了
 			避免这样的错误，参阅 |script-here|.
 
 {endmarker} 前面 不能 有任何空白字符。如果在 "<<" 之后省略了 {endmarker}，
@@ -44,7 +44,7 @@ Vim 的 Python 界面仅当 |+python| 特性被编译进 Vim 时才有效。
 	EOF
 	endfunction
 <
-Note: Python 对于缩进是非常敏感的。要确保 "class" 所在行及 "EOF" 没有任何缩进。
+备注: Python 对于缩进是非常敏感的。要确保 "class" 所在行及 "EOF" 没有任何缩进。
 
 							*:pyfile* *:pyf*
 :[range]pyf[ile] {file}	
@@ -73,7 +73,7 @@ Python 命令不能用于 |sandbox|。
 	:python print "Hello"
 	:python str = current.buffer[42]
 
-(Note 如同导入 (import) 模块一样，变动对后续命令持续有效。这和 Python 的解释
+(注意 如同导入 (import) 模块一样，变动对后续命令持续有效。这和 Python 的解释
 程序是一样的。)
 
 ==============================================================================
@@ -141,7 +141,7 @@ vim.eval(str)						*python-eval*
 			# nothing in register a
 
 "vim" 模块中的常量
-	Note 这些其实并非真正的常量 － 你还是可以对它们符值。但这好无意义，因为
+	注意 这些其实并非真正的常量 － 你还是可以对它们符值。但这好无意义，因为
 	你会丢失该 vim 对象本来代表的值。
 
 vim.buffers						*python-buffers*
@@ -196,7 +196,7 @@ Python 的输出						*python-output*
 
 你也可以将缓冲对象视为顺序对象。这样的话，它们就可以被像一个字符串序列一样
 取存 (它们是可变的)。每一个元素是缓冲中的一行。所有的顺序存取操作，包括索引
-索引赋值，切片及切片赋值，等等，都可以被使用。Note 索引(切片)操作的结果是一
+索引赋值，切片及切片赋值，等等，都可以被使用。注意 索引(切片)操作的结果是一
 个字符串(字符串序列)。这产生了一个意想不到的结果 - b[:] 和 b 是不同的。确切
 一些，"b[:] = None" 会清空整个缓冲，而 "b = None" 仅仅更新变量 b 的值，完全
 不会影响到缓冲。
@@ -207,7 +207,7 @@ Python 的输出						*python-output*
 缓冲对象的方法有:
 	b.append(str)	对缓冲附加一行
 	b.append(list)	对缓冲附加一系列行
-			Note append 方法可以带一个字符串序列作为参数，这和
+			备注 append 方法可以带一个字符串序列作为参数，这和
 			Python 中对应的方法是不同的。
 	b.mark(name)	返回一个 tuple (行,列) 用来代表该位置上的一个有名的
 			标记 (也可以用于 []"<> 等标记)

@@ -1,8 +1,8 @@
-*recover.txt*   For Vim version 6.2.  原文最近更新: 2001年9月3日
+*recover.txt*   For Vim version 6.2.  最近更新: 2005年3月
 
 
 		     Vim 参考手册    作者：Bram Moolenaar
-	    (翻译：iCrazy<icrazy@ustc.edu>  http://vimcdoc.sf.net)
+	    译者: iCrazy<icrazy@ustc.edu>  http://vimcdoc.sf.net
 
 从崩溃中恢复						*crash-recovery*
 

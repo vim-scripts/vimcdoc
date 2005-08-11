@@ -1,8 +1,8 @@
-*debugger.txt*	For Vim version 6.2.  原文最近更新: 2001年12月22日
+*debugger.txt*	For Vim version 6.2.  最近更新: 2005年3月
 
 
 		     Vim 参考手册    作者：Gordon Prieur
-	   (翻译：iCrazy <icrazy@ustc.edu>  http://vimcdoc.sf.net)
+	   译者: iCrazy <icrazy@ustc.edu>  http://vimcdoc.sf.net
 
 
 支持调试器的特性					*debugger-support*

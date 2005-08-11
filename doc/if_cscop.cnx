@@ -1,8 +1,8 @@
-*if_cscop.txt*  For Vim version 6.3.  最近更新：2004年6月
+*if_cscop.txt*  For Vim version 6.3.  最近更新：2005年3月
 
 
 		  VIM REFERENCE MANUAL    by Andy Kahn
-		(译者：lang2 http://vimcdoc.sf.net)
+		译者：lang2 http://vimcdoc.sf.net
 
 							*cscope* *Cscope*
 本文档阐述如何使用 Vim 的 cscope 界面。
@@ -18,7 +18,7 @@ ctags 强大很多。 在 Vim 里，通过 cscope 查询结果来跳转就象跳
 4. 如何在 Vim 中使用 cscope	|cscope-howtouse|
 5. 缺陷				|cscope-limitations|
 6. 建议的使用方法		|cscope-suggestions|
-7. cscope 的获取等等信息	|cscope-info|
+7. 如何获取 cscope 等等		|cscope-info|
 
 到目前为止 cscope 界面仅在 Unix 及 Win32 平台下有效。
 {Vi does not have any of these commands}
@@ -26,7 +26,7 @@ ctags 强大很多。 在 Vim 里，通过 cscope 查询结果来跳转就象跳
 ==============================================================================
 1. Cscope 简介						*cscope-intro*
 
-下面的文本是摘自 cscope 的手册页:
+下面文本摘自 cscope 的手册页:
 
 				    -----
 
@@ -70,7 +70,7 @@ ctags 强大很多。 在 Vim 里，通过 cscope 查询结果来跳转就象跳
 Vim 的 cscope 界面的工作原理是：先调用 cscope 的命令行界面，然后分析其
 输出结果从而找到匹配处。最终结果是：cscope 查询结果就象一般的标签一样。
 你可以使用一般的标签命令 (Ctrl-］ 或 :tag) 然后再用 Ctrl-T 回跳。
-(note 不过，其实你不能简单的就使用 Ctrl-] 或 :tag 来跳转到标签。在那之前
+(注意 不过，其实你不能简单的就使用 Ctrl-] 或 :tag 来跳转到标签。在那之前
 你必须重新定义映射或设定一些选项值。下面的几节会告诉你如何正确的使用
 cscope 界面)
 
@@ -269,7 +269,7 @@ cscope 数据库之前被搜索。缺省值为 0。
  # pid	  database name			      prepend path
  0 28806  cscope.out			      <none>
 <
-Note:
+备注:
 因为 Microsoft RTL 的缺陷，Win32 版本只能显示 0 而不是真正的进程 ID。
 
 一旦建立了 cscope 连接，你就可以做各种查询并得到结果。查询所用的命令是
@@ -385,7 +385,7 @@ cscope 可以在这里找到:
 		\:vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
 ==============================================================================
-7. Cscope 的获取等等信息				*cscope-info*
+7. 如何获取 Cscope 等等					*cscope-info*
 
 如果你还没有 cscope (你的编译器或 OS 没有包括 cscope)，你可以从下面的地址免费
 下载:

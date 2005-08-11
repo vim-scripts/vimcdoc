@@ -1,7 +1,7 @@
-*usr_24.txt*	For Vim version 6.3.		最近更新: 2004年6月
+*usr_24.txt*	For Vim version 6.3.	最近更新: 2005年3月
 
 		     VIM 用户手册 - Bram Moolenaar 著
-		  (译者： Chimin Yen http://vimcdoc.sf.net )
+		  译者： Chimin Yen http://vimcdoc.sf.net
 
 			      快速插入
 
@@ -344,7 +344,7 @@ Benny": >
 示：
 <, S, p, a, c, e, >。
 
-	Note:
+	备注:
 	":iabbrev" 有点嫌长。":iab" 作用也一样。缩写命令被缩写了!
 
 
@@ -426,7 +426,7 @@ CTRL-V 命令用来插入下一个字面意义上的字符。换言之，无论�
 插入一个 <Esc> 字符。而你并未脱离插入模式。(不要在 CTRL-V 后面键入空格，那个空
 格仅仅为了方便阅读)。
 
-	Note:
+	备注:
 	在 MS-Windows 环境下，CTRL-V 用来粘贴文本。所以用 CTRL-Q 代替 CTRL-V。
 	另外，在 Unix 环境下，CTRL-Q 在某些终端上不起作用，因其另有特殊意义。
 	
@@ -482,7 +482,7 @@ Vim 将把二元字符表显示在屏幕上。以下就是其中的三行:
 CTRL-K dP 也没问题。由于 "dP" 不是二元字符，Vim 会转而搜索表示成 "Pd" 的二元
 字符。
 
-	Note:
+	备注:
 	二元字符表取决于 Vim 假定你所使用的字符集。在 MS-DOS 系统上采用的二元
 	字符集不同于 MS-Windows 系统上的。务必用 ":digraphs" 命令来查找当前
 	可供利用的二元字符。

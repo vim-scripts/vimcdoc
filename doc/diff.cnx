@@ -2,7 +2,7 @@
 
 
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
-		   翻译：Zimin<cranecai@users.sf.net>
+		   译者: Zimin<cranecai@users.sf.net>
 		     VCD主页：http://vimcdoc.sf.net
 
 
@@ -83,7 +83,7 @@ Vim 将为每个文件打开一个窗口。就象使用 |-O| 参数一样。使�
 		结果。设定了和 "vimdiff" 同样的参数。
 		{patchfile} 可以是任何一种 "patch" 程序认识的或 'patchexpr'
 		可以处理的格式。
-		Note: {patchfile} 只能包含一个文件的比较结果，即当前文件的。如
+		备注: {patchfile} 只能包含一个文件的比较结果，即当前文件的。如
 		果 {patchfile} 也包含了其他文件的比较，结果将不可预知。Vim 改
 		变目录到 /tmp 以避免当前目录被意外的打补丁。但它仍可能导致若干
 		".rej" 文件产生。当绝对路径名出现时，这些文件可能被打补丁。
@@ -207,7 +207,7 @@ dp		同 ":diffput" 但没有参数和范围。
 
 	:1,$+1diffget
 
-Note: 被删除的行会被显示，但不会被作为文本行统计。你也不能将光标移至其中。
+备注: 被删除的行会被显示，但不会被作为文本行统计。你也不能将光标移至其中。
 要用另一个缓冲来填充被删除的行，可在其下一行用 ":diffget"。
 
 参数 [bufspec] 可以是一个缓冲的序号，一个缓冲名称或缓冲名称的一部分的模式，如：
@@ -299,7 +299,7 @@ Vim 将测试 diff 的输出看上去是否完全正确，如果不正确，你�
 
 	patch -o outfile origfile < patchfile
 
-对于大多数的 "patch" 程序版本，这都可以正确工作。 Note: 在一行中间的 CR 可能
+对于大多数的 "patch" 程序版本，这都可以正确工作。 备注: 在一行中间的 CR 可能
 产生问题。它被当做一个换行符。
 
 如果默认值无法使工作，设定 'patchexpr' 使之有以上所述的同样的效果。以下的变量

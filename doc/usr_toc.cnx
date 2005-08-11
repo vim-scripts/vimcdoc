@@ -1,4 +1,4 @@
-*usr_toc.txt*	For Vim version 6.3.  最近更新: 2004年6月
+*usr_toc.txt*	For Vim version 6.3.  最近更新: 2005年3月
 
 		     VIM USER MANUAL - by Bram Moolenaar
 
@@ -102,8 +102,8 @@
 		|05.1|	vimrc 文件
 		|05.2|	vimrc 示例解释
 		|05.3|	简单键盘映射
-		|05.4|	增加插件
-		|05.5|	增加帮助
+		|05.4|	添加插件
+		|05.5|	添加帮助
 		|05.6|	选项窗口
 		|05.7|	常用选项
 

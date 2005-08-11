@@ -2,7 +2,7 @@
 
 
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
-		      翻译：Zimin<cranecai@users.sf.net>
+		      译者: Zimin<cranecai@users.sf.net>
 
 
 折叠						*Folding* *folding*
@@ -76,7 +76,7 @@
 	:set foldexpr=getline(v:lnum)=~'^\\s*$'&&getline(v:lnum+1)=~'\\S'?'<1':1
 同上：  >
 	:set foldexpr=getline(v:lnum-1)=~'^\\s*$'&&getline(v:lnum)=~'\\S'?'>1':1
-Note：对 escape 类的字符必须使用反斜杠符。（空格，反斜杠，双引号，等等，参考 
+备注:对 escape 类的字符必须使用反斜杠符。（空格，反斜杠，双引号，等等，参考 
 |option-backslash|）
 
 这些是表达式的计算条件：
@@ -102,7 +102,7 @@ Note：对 escape 类的字符必须使用反斜杠符。（空格，反斜杠�
 表达式中有错误或者计算结果不能识别时，Vim 不会产生错误消息，而是将折叠级别设为
 0。所以当需要调试时，可将 'debug' 选项设为 "msg"，错误消息就可以被见到了。
 
-Note：由于每一行关于表达式的值都要被计算，这一折叠方式可能会很慢！
+备注:由于每一行关于表达式的值都要被计算，这一折叠方式可能会很慢！
 
 最好避免使用 "=" ， "a" 和 "s" 作为返回值，因为 Vim 不得不经常向后回溯以得到折叠
 级别。这会降低执行速度。
@@ -169,7 +169,7 @@ brute-force syncing: >
 
 数字指定了折叠级别。不能使用 0。
 你可以使用 "}}}" 带上一个数字来表示这个级别的折叠结束。此行以下的折叠级别将小
-于当前指定的级别。Note：Vim 不会回溯匹配的标志（这将耗费太多的时间）。如： >
+于当前指定的级别。备注:Vim 不会回溯匹配的标志（这将耗费太多的时间）。如： >
 
 	{{{1
 	fold level here is 1
@@ -409,7 +409,7 @@ zk		向上移动到前一折叠的结束处。关闭的折叠也被计入。
     :set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')
 
 显示了折叠的第一行，除去其中的 "/*", "*/" 和 "{{{" 。
-Note：使用反斜杠是为了避免一些字符被 ":set" 命令解释。使用一个函数更简单： >
+备注:使用反斜杠是为了避免一些字符被 ":set" 命令解释。使用一个函数更简单： >
 
     :set foldtext=MyFoldText()
     :function MyFoldText()
@@ -433,7 +433,7 @@ Note：使用反斜杠是为了避免一些字符被 ":set" 命令解释。使�
 结果行被截短以适合窗口的宽度，而不会使用换行。
 当在文字后有空余时，用 'fillchars' 来填充。
 
-Note：对那些 ":set" 命令作特殊处理的字符在其前面需加上反斜杠。如：空格，反斜杠
+备注:对那些 ":set" 命令作特殊处理的字符在其前面需加上反斜杠。如：空格，反斜杠
 和双引号。 |option-backslash|
 
 

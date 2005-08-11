@@ -1,8 +1,8 @@
-﻿*map.txt*       For Vim version 6.3b.  原文最后更新: 2004年3月26日
+*map.txt*	For Vim version 6.3b.  原文最后更新: 2004年3月26日
 
 
 		  VIM 参考手册    作者: Bram Moolenaar
-		  		  翻译: con<con@netease.com>
+		  		  译者:  con<con@netease.com>
 				  VCD主页：http://vimcdoc.sf.net
 
 
@@ -66,7 +66,7 @@
 :cu[nmap] {lhs}						*:cu*   *:cunmap*
 			在映射命令作用的模式中删除 {lhs} 的映射. 该映射可能
 			会在它作用的其它模式中被保留.
-			Note: {lhs} 包含末尾的空格. 该映射取消操作不会生效:
+			备注: {lhs} 包含末尾的空格. 该映射取消操作不会生效:
 				:map @@ foo
 				:unmap @@ | print
 
@@ -108,7 +108,7 @@
 如何保存和恢复当前映射可以参考 |:mkexrc| .
 
 				*:map-local* *:map-<buffer>* *E224* *E225*
-如果这些命令的第一个参数是 "<buffer>" ,映射将只局限于当前的缓冲內. 例如: >
+如果这些命令的第一个参数是 "<buffer>" ,映射将只局限于当前的缓冲内. 例如: >
 	:map <buffer>  ,w  /[.,;]<CR>
 然后你可以把 ",w" 在另一个缓冲内作另外的映射: >
 	:map <buffer>  ,w  /[#&!]<CR>
@@ -132,7 +132,7 @@
 该映射将仅仅重映射 {rhs} 中使用被一个以 "<SID>" 开头的脚本局部定义的映射中的字符.
 它可以用于避免来自外部的脚本的干扰 (举例来说, 在 mswin.vim 中 CTRL-V 被重新映射 ),
 但是又使用该脚本中定义的其它映射.
-Note: ":map <script>" 和 ":noremap <script>" 做同样的事情.
+备注: ":map <script>" 和 ":noremap <script>" 做同样的事情.
 "<script>" 否决了该命令名.  更推荐使用 ":noremap <script>" ,因为它更清晰的表示
 了重映射已被 (大多数时候) 禁止.
 
